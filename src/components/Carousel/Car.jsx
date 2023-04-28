@@ -8,6 +8,7 @@ function Car() {
         <img
           className="d-block w-100"
           src={godimg}
+          style={{height: "600px"}}
           alt="First slide"
         />
       </Carousel.Item>
@@ -16,6 +17,7 @@ function Car() {
         <img
           className="d-block w-100"
           src={godimg}  
+          style={{height: "600px"}}
           alt="Second slide"
         />
       </Carousel.Item>
@@ -24,7 +26,7 @@ function Car() {
         <img
           className="d-block w-100"
           src={godimg}
-          // style={{height: "600px"}}
+          style={{height: "600px"}}
           alt="Third slide"
         />
       </Carousel.Item>

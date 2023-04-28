@@ -1,7 +1,7 @@
 import React from 'react'
 import './Baner.css'
-import godimg from '../Images/godpiccut.jpg'
-import govlogo from '../Images/AP-Govt-Logo.png'
+import godimg from '../../Assets/Images/mandeshwarswamylogo.png'
+import govlogo from '../../Assets/Images/AP-Govt-Logo.png'
 
 const Baner = () => {
   return (
@@ -19,7 +19,7 @@ const Baner = () => {
         <div className="english-title">
           <div className='english-govt-title'>Endowment Department, Govt of AP.</div>
           <div className='english-temple-title'>Sri Mandeswara (Saneswara) Swamy Devastanam</div>
-          <div className='telugu-address-title'>Mandapalli(V), Kothapeta(M) - 533223, E.G.Dist(Andhra Pradesh) Ph: 08855 243208</div>
+          <div className='english-address-title'>Mandapalli(V), Kothapeta(M) - 533223, E.G.Dist(Andhra Pradesh) Ph: 08855 243208</div>
         </div>
       </div>
 

@@ -6,7 +6,7 @@
 
 .Baner {
     padding: 0% 0.7%;
-    background-color: orange;
+    background-color: rgb(247, 199, 77);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,7 +20,7 @@
 .godimg {
     display: flex;
     align-items: center;
-    height: 280px;
+    height: 200px;
     width: 400px;
 }
 
@@ -30,45 +30,52 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .telugu-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 5px;
 }
 
 .telugu-govt-title {
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .telugu-temple-title {
-    font-size: 20px;
+    font-size: 32px;
+    /* margin: 0.2% 0%; */
+    font-weight: bold;
+    color: red;
 }
 
 .telugu-address-title {
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .english-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 0px;
 }
 
 .english-govt-title {
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .english-temple-title {
-    font-size: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: red;
 }
 
 .english-address-title {
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .govt-logo {
