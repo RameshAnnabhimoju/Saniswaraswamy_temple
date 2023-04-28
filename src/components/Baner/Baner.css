@@ -1,0 +1,81 @@
+* {
+    /* background-color: rgb(246, 232, 154); */
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.Baner {
+    padding: 0% 0.7%;
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.god-image {
+    width: 25%;
+}
+
+.godimg {
+    display: flex;
+    align-items: center;
+    height: 280px;
+    width: 400px;
+}
+
+.title {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.telugu-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 5px;
+}
+
+.telugu-govt-title {
+    font-size: 10px;
+}
+
+.telugu-temple-title {
+    font-size: 20px;
+}
+
+.telugu-address-title {
+    font-size: 10px;
+}
+
+.english-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0px;
+}
+
+.english-govt-title {
+    font-size: 10px;
+}
+
+.english-temple-title {
+    font-size: 20px;
+}
+
+.english-address-title {
+    font-size: 10px;
+}
+
+.govt-logo {
+    width: 10%;
+}
+
+.govtlogo {
+    height: 180px;
+    width: 180px;
+}
