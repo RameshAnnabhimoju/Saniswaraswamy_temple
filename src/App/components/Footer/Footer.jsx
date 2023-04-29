@@ -53,7 +53,7 @@ function Footer() {
         <div className="footer-right-item">Privacy policy</div>
         <div className="footer-right-item">Copyright©</div>
         <div className="footer-right-item">Terms & conditions</div>
-        <div className="footer-right-item">Developedby</div>
+        <div className="footer-right-item">Developedby: PULSEINFOTECH</div>
       </div>
     </div>
   );
