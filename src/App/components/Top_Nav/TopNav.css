@@ -1,0 +1,18 @@
+.topNav-container{
+    height: 35px;
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+.topNav-button{
+    background-color: transparent;
+    color: white;
+    border: 0;
+    font-family: var(--font-english);
+    font-weight: 400;
+}
+.topNav-button:hover{
+    border-bottom: 2px solid white;
+}

@@ -1,0 +1,22 @@
+:root{
+    --color-primary: #FFD460;
+    --color-primary-light: #ffe6a2;
+    --color-primary-dark: #ffc830;
+    
+    --color-secondary: #F07B3F;
+    --color-secondary-dark: #dc6f38;
+    --color-secondary-light: #fecfb8;
+
+    --color-red: #EA5455;
+    --color-red-dark:rgb(200, 74, 74);
+
+    --color-red-youtube-light:#ff7575;
+    --color-red-youtube:#ff2d2d;
+    --color-red-youtube-dark:#cc2020;
+    
+    --color-dark: #2D4059;
+
+    --font-telugu:'Noto Sans Telugu', sans-serif;
+    --font-english:'Roboto Slab', serif;
+
+   }
