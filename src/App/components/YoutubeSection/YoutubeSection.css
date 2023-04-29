@@ -1,0 +1,43 @@
+.youtube-container{
+    background-color: var(--color-red);
+    color: white;
+    display: flex;
+    height: 400px;
+    margin: 10px 0;
+    padding: 50px 0 ;
+    padding-left: 100px;
+}
+
+.youtube-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 80px;
+}
+.youtube-heading{
+font-family: var(--font-english);
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.youtube-description{
+font-family: var(--font-telugu);
+font-size: 1.2rem;
+}
+.youtube-button{
+    border: 0;
+    width: 30%;
+    height: 15%;
+    border-radius: 5px;
+    margin: 10px 32%;
+    color: white;
+    font-family: var(--font-english);
+    background-color: var(--color-red-youtube);
+    font-weight: 700;
+}
+.youtube-button:hover{
+    background-color: var(--color-red-youtube-dark);
+}
+.youtube-button:active{
+    background-color: var(--color-red-youtube-light);
+}

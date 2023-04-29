@@ -1,0 +1,93 @@
+@import '../../Themes/AppThemes.css';
+.Baner {
+    padding: 0% 0.7%;
+    background-color: var(--color-primary);
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+}
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+.select-disable{
+    pointer-events: none
+}
+.godimg {
+    
+    height: 200px;
+    width: 400px;
+}
+
+.title {
+    text-align: center;
+    /* width: 70%; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* gap: 25px; */
+}
+
+.govt-title{
+    margin: 0 0;
+}
+.temple-title{
+    margin-bottom: 5px;
+}
+.address-title{
+    margin-bottom: 5px;
+
+}
+.telugu-govt-title {
+    font-size: 16px;
+    font-family: var(--font-telugu);
+    font-weight: 700;
+    
+}
+
+.telugu-temple-title {
+    font-family: var(--font-telugu);
+    font-weight: 900;
+    font-size: 30px;
+    /* margin: 0.2% 0%; */
+    color: var(--color-red);
+}
+
+.telugu-address-title {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--font-telugu);
+}
+
+
+.english-govt-title {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: var(--font-english);
+}
+
+.english-temple-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--color-red);
+    font-family: var(--font-english);
+}
+
+.english-address-title {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: var(--font-english);
+}
+
+.govt-logo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.govtlogo {
+    height: 180px;
+    width: 180px;
+}

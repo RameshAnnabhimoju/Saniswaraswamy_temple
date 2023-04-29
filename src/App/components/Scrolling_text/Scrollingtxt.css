@@ -2,9 +2,8 @@
     height: 50px;
     overflow: hidden;
     position: relative;
-    background-color: rgb(247, 199, 77);
+    background-color: var(--color-primary);
     color: black;
-    border: 1px solid orange;
 }
 
 .scroll-left p {
@@ -15,9 +14,9 @@
     line-height: 50px;
     text-align: center;
     /* Starting position */
-    transform: translateX(500%);
+    transform: translateX(100%);
     /* Apply animation to this element */
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 40s linear infinite;
 }
 
 

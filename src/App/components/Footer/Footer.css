@@ -1,0 +1,30 @@
+.footer-container{
+    background-color: var(--color-dark);
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end;
+    padding: 25px 25px;
+    font-family: var(--font-english);
+    
+}
+.footer-image{
+    margin: 0 15px;
+}
+
+.contactus-heading{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.contactus-item{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.footer-right-item{
+    cursor: pointer;
+}
+.footer-left-item{
+    margin-bottom: 62px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
