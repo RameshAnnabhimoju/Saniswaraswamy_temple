@@ -13,6 +13,8 @@ import "./Home.css";
 import Newsupdates from "../../components/News&updates/Newsupdates";
 import Events from "../../components/Events/Events";
 import AboutTemple from "../../components/About Temple/AboutTemple";
+import Featured from "../../components/Featured/Featured";
+
 const Home = () => {
   return (
     <div>
@@ -25,6 +27,7 @@ const Home = () => {
         <Newsupdates />
         <Events />
       </div>
+      <Featured />
       <Poojas />
       <YoutubeSection />
       <div className="Donate-section">

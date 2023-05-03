@@ -1,11 +1,17 @@
 .youtube-container{
-    background-color: var(--color-red);
+    background-color: var(--color-blue-youtube);
+    background-image: url("../../Assets/Images/mandeshwarswamylogo-low.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    background-blend-mode:  soft-light;
     color: white;
     display: flex;
     height: 400px;
     margin: 10px 0;
     padding: 50px 0 ;
     padding-left: 100px;
+    z-index: -1;
 }
 
 .youtube-text{
@@ -32,12 +38,13 @@ font-size: 1.2rem;
     margin: 10px 32%;
     color: white;
     font-family: var(--font-english);
-    background-color: var(--color-red-youtube);
+    background-color: var(--color-secondary);
     font-weight: 700;
 }
 .youtube-button:hover{
-    background-color: var(--color-red-youtube-dark);
+    background-color: var(--color-secondary-dark);
 }
 .youtube-button:active{
-    background-color: var(--color-red-youtube-light);
+    background-color: var(--color-secondary-light);
+    color: var(--color-dark);
 }

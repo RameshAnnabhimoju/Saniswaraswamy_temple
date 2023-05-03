@@ -18,6 +18,12 @@ const Navbar = () => {
       <div className="nav-item">
         <h5>About Temple</h5>
       </div>
+      <div className="nav-item">
+        <h5>Sevas & Darshanam</h5>
+      </div>
+      <div className="nav-item">
+        <h5>Donations</h5>
+      </div>
 
       <div className="nav-item">
         <h5>Online Services</h5>
@@ -33,6 +39,9 @@ const Navbar = () => {
 
       <div className="nav-item">
         <h5>Support</h5>
+      </div>
+      <div className="nav-item nav-signup">
+        <h5>Signin</h5>
       </div>
     </div>
   );
