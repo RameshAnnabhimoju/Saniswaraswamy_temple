@@ -27,13 +27,16 @@ const Home = () => {
         <Newsupdates />
         <Events />
       </div>
+
       <Featured />
       <Poojas />
       <YoutubeSection />
+
       <div className="Donate-section">
         <Annadanam />
         <Donations />
       </div>
+      
       <Footer />
     </div>
   );

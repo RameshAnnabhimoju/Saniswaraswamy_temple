@@ -7,19 +7,29 @@
     align-items: center;
     justify-content: center;
     /* padding: 0% 10%; */
-    position:sticky;
-    top:0;
+    position: sticky;
+    top: 0;
     z-index: 3;
 }
 
-.nav-item{
+.nav-item {
     padding: 12px 20px;
     text-align: center;
     height: 100%;
     cursor: pointer;
 }
-.nav-item:hover{
-background-color: var(--color-orange-dark);
+
+.nav-item:hover {
+    background-color: var(--color-orange-dark);
 }
-.nav-signup{
+
+.nav-signup {}
+
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+    .Navbar {
+        display: none;
+    }
 }

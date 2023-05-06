@@ -1,38 +1,46 @@
-.pooja-container{
+.pooja-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 50px 50px;
-    gap:10px;
+    gap: 10px;
 }
 
-.pooja-card{
-    background-color: var(--color-primary-light) ;
+.pooja-card {
+    background-color: var(--color-primary-light);
     padding: 25px 25px;
     border-radius: 5px;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
     height: 400px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.pooja-card:hover{
-    background-color: var(--color-primary) ;
+
+.pooja-card:hover {
+    background-color: var(--color-primary);
     color: var(--color-red-dark);
 }
-.pooja-heading{
+
+.pooja-heading {
     font-family: var(--font-telugu);
     font-size: 1.6rem;
     font-weight: 600;
 }
-.pooja-data{
+
+.pooja-data {
     font-family: var(--font-telugu);
     /* text-align: justify; */
     /* text-justify: newspaper; */
     margin: 25px 0;
 }
-.pooja-button{
+
+.pooja-button {
     text-align: center;
     margin: 0 10%;
     width: 50%;
@@ -43,12 +51,36 @@
     color: white;
     font-family: var(--font-english);
     font-weight: 600;
-    
 }
-.pooja-button:hover{
+
+.pooja-button:hover {
     background-color: var(--color-secondary-dark)
 }
-.pooja-button:active{
+
+.pooja-button:active {
     background-color: var(--color-dark);
     /* color: var(--color-secondary-dark); */
+}
+
+@media screen and (max-width: 768px) {
+    .pooja-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .pooja-card {
+        padding: 20px 20px;
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .pooja-container {
+        /* height: 1000px; */
+        /* margin: 0px 0px; */
+    }
+    .pooja-card {
+        height: 450px;
+    }
 }

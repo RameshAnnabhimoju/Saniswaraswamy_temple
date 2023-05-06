@@ -1,4 +1,4 @@
-.featured-container{
+.featured-container {
     background-color: var(--color-dark);
     background-image: url(../../Assets/Images/shani.png);
     background-repeat: no-repeat;
@@ -11,33 +11,38 @@
     margin: 85px 0;
     font-family: var(--font-telugu);
     font-size: 1.2rem;
-    max-height: 450px;
+    max-height: 900px;
     justify-content: space-evenly;
 }
 
-.featured-left{
+.featured-left {
     max-width: 800px;
 }
-.featured-right ul{
+
+.featured-right ul {
     margin: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 50px;
     width: 100%;
 }
-.featured-purnami{
+
+.featured-purnami {}
+
+.featured-amavasya {
+    list-style: circle;
 }
-.featured-amavasya{
-list-style: circle;
-}
-.featured-amavasya::marker, .featured-purnami::marker{
+
+.featured-amavasya::marker,
+.featured-purnami::marker {
     font-size: 2.5rem;
 }
-.featured-button{
+
+.featured-button {
     text-align: center;
     margin: 0 10%;
-    width: 28%;
-    height: 20%;
+    width: auto;
+    height: 50px;
     border: 0;
     border-radius: 5px;
     background-color: var(--color-secondary);
@@ -46,18 +51,30 @@ list-style: circle;
     font-weight: 600;
     margin: 25px 0;
 }
-.featured-button:hover{
+
+.featured-button:hover {
     background-color: var(--color-secondary-dark)
 }
-.featured-button:active{
+
+.featured-button:active {
     background-color: var(--color-secondary-light);
     color: var(--color-dark);
 }
-.featured-legend{
-font-size: 1rem;
+
+.featured-legend {
+    font-size: 1rem;
 }
-.featured-left-heading{
+
+.featured-left-heading {
     font-weight: 800;
     font-size: 1.8rem;
     margin: 10px 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .featured-container {
+        height: 900;
+        display: flex;
+        flex-direction: column;
+    }
 }

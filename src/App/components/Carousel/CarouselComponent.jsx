@@ -4,8 +4,8 @@ import godimg_2 from "../../Assets/Images/Carousel_img-2.png";
 import "./CarouselComponent.css";
 function CarouselComponent() {
   return (
-    <Carousel>
-      <Carousel.Item interval={5000}>
+    <Carousel className="carousel">
+      <Carousel.Item className="item" interval={5000}>
         <img
           className="d-block w-100 select-disable"
           src={godimg}
@@ -14,7 +14,7 @@ function CarouselComponent() {
         />
       </Carousel.Item>
 
-      <Carousel.Item interval={5000}>
+      <Carousel.Item className="item" interval={5000}>
         <img
           className="d-block w-100 select-disable"
           src={godimg_2}
@@ -23,7 +23,7 @@ function CarouselComponent() {
         />
       </Carousel.Item>
 
-      <Carousel.Item interval={5000}>
+      <Carousel.Item className="item" interval={5000}>
         <img
           className="d-block w-100 select-disable"
           src={godimg}
