@@ -1,5 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
-import godimg from "../../Assets/Images/godpiccut.jpg";
+import godimg from "../../Assets/Images/Carousel_img.png";
+import godimg_2 from "../../Assets/Images/Carousel_img-2.png";
 import "./CarouselComponent.css";
 function CarouselComponent() {
   return (
@@ -8,7 +9,7 @@ function CarouselComponent() {
         <img
           className="d-block w-100 select-disable"
           src={godimg}
-          style={{ height: "600px" }}
+          style={{ height: "500px" }}
           alt="First slide"
         />
       </Carousel.Item>
@@ -16,8 +17,8 @@ function CarouselComponent() {
       <Carousel.Item interval={5000}>
         <img
           className="d-block w-100 select-disable"
-          src={godimg}
-          style={{ height: "600px" }}
+          src={godimg_2}
+          style={{ height: "500px" }}
           alt="Second slide"
         />
       </Carousel.Item>
@@ -26,7 +27,7 @@ function CarouselComponent() {
         <img
           className="d-block w-100 select-disable"
           src={godimg}
-          style={{ height: "600px" }}
+          style={{ height: "500px" }}
           alt="Third slide"
         />
       </Carousel.Item>

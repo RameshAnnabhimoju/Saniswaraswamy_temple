@@ -1,21 +1,38 @@
 @import '../../Themes/AppThemes.css';
 .Baner {
     padding: 0% 0.7%;
-    background-color: var(--color-primary);
+    background: linear-gradient( to right, rgb(244, 51, 51), #eb0a46, #901967, #901967, #eb0a46, rgb(244, 51, 51));
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     align-items: center;
 }
+
 .prevent-select {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
-.select-disable{
+
+.select-disable {
     pointer-events: none
 }
+
+.decoration {
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient( to right, rgb(250, 22, 79), #eb0a46, #901967, #901967, #eb0a46, rgb(250, 22, 79));
+}
+
+.garland-img {
+    height: 30px;
+    width: 20%;
+}
+
 .godimg {
-    
     height: 200px;
     width: 400px;
 }
@@ -30,64 +47,69 @@
     /* gap: 25px; */
 }
 
-.govt-title{
+.govt-title {
     margin: 0 0;
 }
-.temple-title{
-    margin-bottom: 5px;
-}
-.address-title{
-    margin-bottom: 5px;
 
+.temple-title {
+    margin-bottom: 5px;
 }
-.telugu-govt-title {
-    font-size: 16px;
-    font-family: var(--font-telugu);
-    font-weight: 700;
-    
+
+.address-title {
+    margin-bottom: 5px;
 }
 
 .telugu-temple-title {
-    font-family: var(--font-telugu);
-    font-weight: 900;
-    font-size: 30px;
-    /* margin: 0.2% 0%; */
-    color: var(--color-red);
+    color: #ffed00;
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 50px;
+    line-height: normal;
 }
 
 .telugu-address-title {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     font-family: var(--font-telugu);
-}
-
-
-.english-govt-title {
-    font-size: 15px;
-    font-weight: bold;
-    font-family: var(--font-english);
+    color: white;
 }
 
 .english-temple-title {
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-red);
+    font-size: 35px;
+    color: #ffed00;
     font-family: var(--font-english);
+    font-weight: bold;
 }
 
 .english-address-title {
     font-size: 15px;
     font-weight: bold;
+    color: white;
     font-family: var(--font-english);
 }
 
 .govt-logo {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .govtlogo {
-    height: 180px;
-    width: 180px;
+    height: 120px;
+    width: 120px;
+}
+
+.telugu-govt-title {
+    font-size: 10px;
+    color: white;
+    font-family: 'Tiro Telugu', serif;
+    font-weight: 600;
+}
+
+.english-govt-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    font-family: var(--font-english);
 }

@@ -1,6 +1,7 @@
 .scroll-left {
     height: 50px;
     overflow: hidden;
+    font-weight: bold;
     position: relative;
     background-color: var(--color-primary);
     color: black;
@@ -16,7 +17,7 @@
     /* Starting position */
     transform: translateX(100%);
     /* Apply animation to this element */
-    animation: scroll-left 40s linear infinite;
+    animation: scroll-left 25s linear infinite;
 }
 
 
