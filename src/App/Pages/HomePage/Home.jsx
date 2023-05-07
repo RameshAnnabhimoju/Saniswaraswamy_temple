@@ -1,11 +1,8 @@
 import React from "react";
-import Baner from "../../components/Baner/Baner";
-import Navbar from "../../components/Navbar/Navbar";
 import CarouselComponent from "../../components/Carousel/CarouselComponent";
 import Scrollingtxt from "../../components/Scrolling_text/Scrollingtxt";
 import Poojas from "../../components/Poojas/Poojas";
 import YoutubeSection from "../../components/YoutubeSection/YoutubeSection";
-import Footer from "../../components/Footer/Footer";
 import Annadanam from "../../components/Annadanam/Annadanam";
 import Donations from "../../components/Donations/Donations";
 import "./Home.css";
@@ -17,8 +14,6 @@ import Featured from "../../components/Featured/Featured";
 const Home = () => {
   return (
     <div>
-      <Baner />
-      <Navbar />
       <CarouselComponent />
       <Scrollingtxt />
       <Teluguscrollingtxt/>
@@ -36,8 +31,6 @@ const Home = () => {
         <Annadanam />
         <Donations />
       </div>
-      
-      <Footer />
     </div>
   );
 };

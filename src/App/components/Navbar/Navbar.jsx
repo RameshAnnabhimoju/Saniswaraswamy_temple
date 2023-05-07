@@ -1,47 +1,59 @@
 import React from "react";
 import "./Navbar.css";
-// import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const Navbar = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="Navbar prevent-select">
       <div
         className="nav-item"
         onClick={() => {
-          // navigate("./")
+          navigate("/")
         }}
       >
-        <h5>Home</h5>
+        <h6>Home</h6>
+      </div>
+
+      <div
+      onClick={()=>{
+        navigate("/About")
+      }}
+       className="nav-item">
+        <h6>About Temple</h6>
+      </div>
+      <div className="nav-item">
+        <h6>Sevas & Darshanam</h6>
+      </div>
+      <div
+      onClick={()=>{
+        navigate("/Donations")
+      }}
+       className="nav-item">
+        <h6>Donations</h6>
       </div>
 
       <div className="nav-item">
-        <h5>About Temple</h5>
+        <h6>Online Services</h6>
       </div>
-      <div className="nav-item">
-        <h5>Sevas & Darshanam</h5>
-      </div>
-      <div className="nav-item">
-        <h5>Donations</h5>
+
+      <div
+      onClick={()=>{
+        navigate("/News")
+      }}
+       className="nav-item">
+        <h6>News & Updates</h6>
       </div>
 
       <div className="nav-item">
-        <h5>Online Services</h5>
+        <h6>Gallery</h6>
       </div>
 
       <div className="nav-item">
-        <h5>News & Updates</h5>
-      </div>
-
-      <div className="nav-item">
-        <h5>Gallery</h5>
-      </div>
-
-      <div className="nav-item">
-        <h5>Support</h5>
+        <h6>Support</h6>
       </div>
       <div className="nav-item nav-signup">
-        <h5>Signin</h5>
+        <h6>Signin</h6>
       </div>
     </div>
   );
