@@ -29,10 +29,16 @@
 
 .nav-signup {}
 
+/*small screen laptop*/
+@media screen and (min-width: 768px)and (max-width: 1366px) {
+    .nav-item>h6{
+        font-size: 0.87rem;
+    }
+}
 
 /* Tablet */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1020px) {
     .Navbar {
         display: none;
     }

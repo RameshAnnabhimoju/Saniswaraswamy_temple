@@ -54,7 +54,7 @@
     color: var(--color-dark);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1352px) {
     .youtube-container {
         height: 700px;
         display: flex;
@@ -80,7 +80,7 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
     .youtube-container {
         height: 780px;
     }
