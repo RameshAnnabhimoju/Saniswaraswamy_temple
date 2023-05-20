@@ -10,6 +10,7 @@ import Newsupdates from "../../components/News&updates/Newsupdates";
 import Events from "../../components/Events/Events";
 import Teluguscrollingtxt from "../../components/Scrolling_text/Tel_scroll_txt"
 import Featured from "../../components/Featured/Featured";
+import Poster from "../../components/Poojas_poster/Poster";
 
 const Home = () => {
   return (
@@ -22,6 +23,8 @@ const Home = () => {
         <Newsupdates />
         <Events />
       </div>
+
+      <Poster/>
 
       <Featured />
       <Poojas />

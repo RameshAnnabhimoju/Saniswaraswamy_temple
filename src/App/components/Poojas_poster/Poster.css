@@ -1,0 +1,56 @@
+.poster-section {
+    background-color: rgb(92, 1, 0);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px;
+    text-align: center;
+    font-family: 'Tiro Telugu', serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.poster-section-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+    margin-bottom: 20px;
+}
+
+.poster-left {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.QR-img {
+    margin-top: 20px;
+    height: 300px;
+    width: 300px;
+}
+
+.poster-right td,
+th {
+    border: 2px solid white;
+    padding: 5px;
+    max-width: 170px;
+    /* overflow-x: scroll; */
+}
+
+th {
+    color: yellow;
+}
+
+
+/* table {
+    overflow-x: scroll;
+} */
+
+
+/* span {
+    color: yellow;
+} */
