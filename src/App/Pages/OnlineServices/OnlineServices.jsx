@@ -1,8 +1,8 @@
 import React from 'react'
-import './Online_services.css'
+import './OnlineServices.css'
 import { useNavigate } from "react-router-dom"
 
-const Online_services = () => {
+const OnlineServices = () => {
   const navigate = useNavigate();
   return (
     <div>
@@ -20,7 +20,7 @@ const Online_services = () => {
             <ul>శాశ్వత శనిత్రయోదశులు (సం.లో వచ్చే ప్రతి శనిత్రయోదశులు) 10 సం||లు మాత్రమే. ₹ 24,000/- (ఈ సం||తో కలిపి)</ul>
           </p>
           <button onClick={()=>{
-            navigate("/Yekadasa_rudratailabishekam")
+            navigate("/YekadasaRudratailabishekam")
           }} className ="card-button">Book Now</button>
         </div>
       </div>
@@ -66,4 +66,4 @@ const Online_services = () => {
   )
 }
 
-export default Online_services
+export default OnlineServices

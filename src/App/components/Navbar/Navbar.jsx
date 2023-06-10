@@ -35,7 +35,7 @@ const Navbar = () => {
 
       <div 
       onClick={()=>{
-        navigate("/Online_services")
+        navigate("/OnlineServices")
       }}
       className="nav-item">
         <h6>Online Services</h6>

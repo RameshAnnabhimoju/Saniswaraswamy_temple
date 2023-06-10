@@ -1,75 +1,40 @@
 import React from 'react'
-import { useState } from 'react'
 
-const Yekadasa_rudratailabishekam = () => {
-  const initial_pooja_values = {
-    name : '',
-    gothram : '',
-    nakshtram : '',
-    pooja : 1,
-    amount : 400,
-    dob : '',
-    gender : '',
-    address : '',
-    city : '',
-    pincode : '',
-    state : '',
-    mobile : '',
-  }
-  const [pooja_values, setpooja_values] = useState(initial_pooja_values)
-  
-// console.log(pooja_values)
-
-  const changeHandler = (e)=>{
-    const Amounts = {
-      "1" : 400,
-      "2" : 20800,
-      "3" : 4000,
-      "4" : 24000
-    }
-      const {name, value} = e.target;
-      if(name == "pooja"){
-        console.log(name, Amounts[value], value);
-        setpooja_values({...pooja_values, [name] : value, amount:Amounts[value]})
-      }else{
-        setpooja_values({...pooja_values, [name] : value});
-      }
-  }
-
+const SaniSanthi = () => {
   return (
-    <div className='Yekadasa_rudratailabishekam'>
-      <div className='Yekadasa_rudratailabishekam_title'>
-      ఏకాదశ రుద్రతైలాభిషేకం
+    <div className='SaniSanthi'>
+      <div className="sani_santhi_title">
+      శని శాంతి హోమం
       </div>
       <form className='donations_form' action="">
         <div>
         <label htmlFor="" >Donor / Nominee Name</label><br />
-        <input className='input_box' name='name' value={pooja_values.name} onChange={changeHandler} type="text" placeholder='please enter donor/nominee name'/>
+        <input className='input_box' type="text" placeholder='please enter donor/nominee name'/>
         </div>
         
         <div>
         <label htmlFor="">Gothram</label><br />
-        <input className='input_box' name='gothram' value={pooja_values.gothram} onChange={changeHandler} type="text" placeholder='please enter your gothram'/>
+        <input className='input_box' type="text" placeholder='please enter your gothram'/>
         </div>
         
         <div>
           <label htmlFor="">Nakshtram</label>
-          <input className='input_box' name='nakshtram' value={pooja_values.nakshtram} onChange={changeHandler} type="text" placeholder='Please enter your nakshtram' />
+          <input className='input_box' type="text" placeholder='Please enter your nakshtram' />
         </div>
 
         <div>
           <label htmlFor="">Select Pooja</label><br />
-          <select name="pooja" value={pooja_values.pooja} onChange={changeHandler} id="">
+          <select name="" id="">
             <option value="1">
             1 సారి పూజకు
             </option>
             <option value="2">
             1సం.లో వచ్చే 52 శనివారములకు
             </option>
-            <option value="3">
+            <option value="">
             శాశ్వత అభిషేకము
             </option>
-            <option value="4">
+            <option value="">
             శాశ్వత శనిత్రయోదశులు
             </option>
           </select>
@@ -77,17 +42,17 @@ const Yekadasa_rudratailabishekam = () => {
 
         <div>
         <label htmlFor="">Amount</label><br />
-        <input className='input_box' name='amount' value={pooja_values.amount} type="text" disabled/>
+        <input className='input_box' type="text" placeholder='Minimun donation amount Rs. 1'/>
         </div>
 
         <div>
         <label htmlFor="">Date of Birth</label> <br />
-        <input className='input_box' name='dob' value={pooja_values.dob} onChange={changeHandler} type="date" id="" />
+        <input className='input_box' type="date" name="" id="" />
         </div>
 
         <div>
         <label htmlFor="">Gender</label><br />
-        <select name="gender" value={pooja_values.gender} onChange={changeHandler} id="">
+        <select name="gender_box" id="">
           <option value="" hidden>Select a gender</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
@@ -97,22 +62,22 @@ const Yekadasa_rudratailabishekam = () => {
 
         <div>
         <label htmlFor="">Address</label><br />
-        <input className='input_box' name='address' value={pooja_values.address} onChange={changeHandler} placeholder='House/building number, street name' type="text" />
+        <input className='input_box' placeholder='House/building number, street name' type="text" />
         </div>
 
         <div>
         <label htmlFor="">City</label><br />
-        <input className='input_box' placeholder='Please enter your city' name='city' value={pooja_values.city} onChange={changeHandler} type="text" />
+        <input className='input_box' placeholder='Please enter your city' type="text" />
         </div>
 
         <div>
         <label htmlFor="">Pincode</label><br />
-        <input className='input_box' placeholder='Enter your pincode' name='pincode' value={pooja_values.pincode} onChange={changeHandler} type="text" />
+        <input className='input_box' placeholder='Enter your pincode' type="text" />
         </div>  
         
         <div>
         <label htmlFor="">State</label><br />
-        <select name='state' value={pooja_values.state} onChange={changeHandler}>
+        <select>
         <option value="" hidden>Select state</option>
         <option value="AN">Andaman and Nicobar Islands</option>
         <option value="AP">Andhra Pradesh</option>
@@ -157,15 +122,17 @@ const Yekadasa_rudratailabishekam = () => {
 
         <div>
         <label htmlFor="">Mobile Number</label><br />
-        <input placeholder='Enter your mobile number' className='input_box' name='mobile' value={pooja_values.mobile} onChange={changeHandler} type="text" />
+        <input placeholder='Enter your mobile number' className='input_box' type="text" />
         </div>
-
       </form>
+
       <div>
-        <button className='btn btn-primary'>Continue</button>
+        <button className='btn btn-primary'>
+          Continue
+        </button>
       </div>
     </div>
   )
 }
 
-export default Yekadasa_rudratailabishekam
+export default SaniSanthi

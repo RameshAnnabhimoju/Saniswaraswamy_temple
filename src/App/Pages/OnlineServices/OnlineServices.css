@@ -62,3 +62,40 @@
     background-color: #e75f1b;
     color: white;
 }
+
+.Confirmdetails {
+    height: 500px;
+    margin: 2% 0%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ConfirmDetails_title {
+    font-size: 28px;
+    font-weight: bold;
+    color: red;
+}
+
+.ConfirmDetails_Card {
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 17px;
+    margin: 0% 20%;
+    padding: 3% 5%;
+    height: 350px;
+    width: 750px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.edit_icon {
+    position: relative;
+    top: -140px;
+    right: -220px;
+    height: 30px;
+    width: 30px;
+}
