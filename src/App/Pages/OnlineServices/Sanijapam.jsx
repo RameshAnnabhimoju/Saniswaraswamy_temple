@@ -1,12 +1,12 @@
 import React from 'react'
-import './Donations.css'
 
-const Donations = () => {
+const Sanijapam = () => {
   return (
-    <div className='donations'>
-      <div className='donations_title'>
-        Donations
+    <div className='Sanijapam'>
+      <div className="sanijapam_title">
+      శని జపం
       </div>
+      
       <form className='donations_form' action="">
         <div>
         <label htmlFor="" >Donor / Nominee Name</label><br />
@@ -17,15 +17,33 @@ const Donations = () => {
         <label htmlFor="">Gothram</label><br />
         <input className='input_box' type="text" placeholder='please enter your gothram'/>
         </div>
+        
+        <div>
+          <label htmlFor="">Nakshtram</label>
+          <input className='input_box' type="text" placeholder='Please enter your nakshtram' />
+        </div>
+
+        <div>
+          <label htmlFor="">Select Pooja</label><br />
+          <select name="" id="">
+            <option value="1">
+            1 సారి పూజకు
+            </option>
+            <option value="2">
+            1సం.లో వచ్చే 52 శనివారములకు
+            </option>
+            <option value="">
+            శాశ్వత అభిషేకము
+            </option>
+            <option value="">
+            శాశ్వత శనిత్రయోదశులు
+            </option>
+          </select>
+        </div>
 
         <div>
         <label htmlFor="">Amount</label><br />
         <input className='input_box' type="text" placeholder='Minimun donation amount Rs. 1'/>
-        </div>
-
-        <div>
-        <label htmlFor="">Occasion / Auspicious Day</label><br />
-        <input className='input_box' type="text" placeholder='please enter the occasion. Eg: Birthday'/>
         </div>
 
         <div>
@@ -107,8 +125,8 @@ const Donations = () => {
         <label htmlFor="">Mobile Number</label><br />
         <input placeholder='Enter your mobile number' className='input_box' type="text" />
         </div>
-
       </form>
+
       <div>
         <button className='btn btn-primary'>Continue</button>
       </div>
@@ -116,4 +134,4 @@ const Donations = () => {
   )
 }
 
-export default Donations
+export default Sanijapam

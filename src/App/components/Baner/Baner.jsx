@@ -39,11 +39,11 @@ const Baner = () => {
 
           <div className="address-title">
             <div className="telugu-address-title">
-              మందపల్లి గ్రామం, కొత్తపేట మండలం - 533223, తూ. గో. జిల్లా
+              మందపల్లి గ్రామం, కొత్తపేట మండలం - 533223, డా॥బి.ఆర్. అంబేద్కర్ కోనసీమ జిల్లా
               (ఆంధ్రప్రదేశ్)
             </div>
             <div className="english-address-title">
-              Mandapalli(V), Kothapeta(M) - 533223, E.G.Dist(Andhra Pradesh) Ph:
+              Mandapalli(V), Kothapeta(M) - 533223, DR. B. R. AMBEDKAR KONASEEMA DISTRICT(Andhra Pradesh) Ph:
               08855 243208
             </div>
           </div>

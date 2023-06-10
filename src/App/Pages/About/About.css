@@ -1,0 +1,21 @@
+.About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 4% 7%;
+}
+
+header {
+    font-size: 23px;
+    font-weight: bold;
+    color: red;
+}
+
+.history,
+.importance,
+.power {
+    font-family: var(--font-telugu);
+    font-size: 18px;
+}

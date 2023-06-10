@@ -34,7 +34,7 @@
         
         .godimg {
             height: 200px;
-            width: 400px;
+            width: 380px;
         }
         
         .title {
@@ -61,27 +61,28 @@
         
         .telugu-temple-title {
             color: #ffed00;
-            font-family: 'Noto Serif Telugu', serif;
+            font-family: var(--font-telugu);
             font-size: 50px;
+            font-weight: bold;
             line-height: normal;
         }
         
         .telugu-address-title {
-            font-size: 15px;
+            font-size: 18px;
             font-weight: 700;
             font-family: var(--font-telugu);
             color: white;
         }
         
         .english-temple-title {
-            font-size: 35px;
+            font-size: 36px;
             color: #ffed00;
             font-family: var(--font-english);
             font-weight: bold;
         }
         
         .english-address-title {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: bold;
             color: white;
             font-family: var(--font-english);
@@ -101,7 +102,7 @@
         }
         
         .telugu-govt-title {
-            font-size: 10px;
+            font-size: 8.5px;
             color: white;
             font-family: 'Tiro Telugu', serif;
             font-weight: 600;
