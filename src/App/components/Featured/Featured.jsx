@@ -15,11 +15,15 @@ function Featured() {
       </div>
       <div className="featured-right">
         <ul>
-          <li className="featured-purnami">01-01-2023</li>
+          <li className="featured-purnami">01-07-2023</li>
           <li className="featured-amavasya">15-07-2023</li>
           <li className="featured-amavasya">11-11-2023</li>
           <li className="featured-purnami">25-11-2023</li>
           <li className="featured-purnami">23-03-2024</li>
+          <li className="featured-purnami">06-04-2024</li>
+          <li className="featured-purnami">17-08-2024</li>
+          <li className="featured-purnami">31-08-2024</li>
+          <li className="featured-purnami">31-12-2024</li>
         </ul>
         <br />
         <ul className="featured-legend">

@@ -1,6 +1,5 @@
-
 .Newsupdates {
-    font-family: var(--font-english);
+    font-family: var(--font-telugu);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -24,7 +23,6 @@
     /* background-color: var(--color-secondary-light); */
     /* border-radius: 10px; */
     /* padding: 20px 40px; */
-    
 }
 
 .Newsupdates-ul>li {

@@ -1,0 +1,35 @@
+.News {
+    margin: 2% 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.News_title {
+    font-size: 35px;
+    font-weight: bold;
+    color: red;
+}
+
+.sectionOne {
+    margin: 2% 10%;
+    font-family: var(--font-telugu);
+}
+
+.sectionOne_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionTwo {
+    margin: 2% 10%;
+    font-family: var(--font-telugu);
+}
+
+.sectionTwo_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
