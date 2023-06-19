@@ -1,5 +1,4 @@
 import React from 'react'
-import Newsupdates from '../../components/News&updates/Newsupdates'
 import './News.css'
 
 const News = () => {
