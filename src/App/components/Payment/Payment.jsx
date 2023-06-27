@@ -1,24 +1,56 @@
-import React from 'react'
-import QR from '../../Assets/Images/QR_Img.jpg'
+import React, { useState } from "react";
+import QR from "../../Assets/Images/QR_Img.jpg";
+import { useNavigate, useLocation } from "react-router";
+import "./Payment.css";
 
 const Payment = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [transactionId, setTransactionId] = useState();
+  function PaymentHandler() {
+    navigate();
+    console.log(transactionId);
+  }
   return (
     <div>
-      <center>
-        <div>
-          Please pay by using below QR Code
+      <div className="payment-heading">Make Payment</div>
+      <div className="payment-container">
+        <img
+          style={{ width: "300px", height: "300px", marginRight: "50px" }}
+          src={QR}
+          alt=""
+        />
+        <div className="payment-content">
+          <div>Please make your payment using the QR Code</div>
+          <div>
+            Make a payment of <b> ₹ {location.state.values}</b>
+          </div>
+          <div>
+            <label htmlFor="">
+              Please enter last 6 digits of transaction ID : <br />
+              (example: xxxxxxxxxxxxxxxxxx123456 )
+            </label>
+            <br />
+            <br />
+            <input
+              type="text"
+              className="input-payment"
+              placeholder="Enter Last 6 digits"
+            />
+          </div>
+          <br />
+          {/* <label htmlFor="">Please enter Debit from Details(Last 4 Digits)</label>
+          <input type="text" /><br /> */}
+          <button
+            className="btn btn-primary button-payment"
+            onClick={PaymentHandler}
+          >
+            Submit
+          </button>
         </div>
-      <img style={{width: "250px", height: "300px"}} src={QR} alt="" />
-        <div>
-          <label htmlFor="">Please enter trasaction ID(Last 4 Digits) : </label>
-          <input type="text" /><br />
-          <label htmlFor="">Please enter Debit from Details(Last 4 Digits)</label>
-          <input type="text" /><br />
-          <button className='btn btn-primary'>Submit</button>
-        </div>
-      </center>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Payment
+export default Payment;
