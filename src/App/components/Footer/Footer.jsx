@@ -55,7 +55,7 @@ function Footer() {
         <a className="footer-right-item" href="https://merchant.razorpay.com/policy/M1TzaBVjdfXkWF/terms">Terms & conditions</a> <br />
         <a className="footer-right-item" href="https://merchant.razorpay.com/policy/M1TzaBVjdfXkWF/refund">Cancellation & Refund Policy</a> <br />
         <a className="footer-right-item" href="https://merchant.razorpay.com/policy/M1TzaBVjdfXkWF/shipping">Shipping & Delivery policy</a> <br />
-        <div className="footer-right-item">Developedby: PULSEINFOTECH</div>
+        <a className="footer-right-item" href="http://www.pulseinfotechllp.com">Developedby: PULSE INFOTECH LLP</a>
       </div>
     </div>
   );

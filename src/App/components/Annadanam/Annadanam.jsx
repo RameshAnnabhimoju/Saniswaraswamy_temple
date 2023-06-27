@@ -7,7 +7,7 @@ const Annadanam = () => {
     <div className="Annadanam">
       <div className="Annadanam-img">
         <img
-          style={{ height: "220px", width: "598px" }}
+          style={{ height: "240px", width: "598px" }}
           src={Annadanampic}
           alt=""
         />

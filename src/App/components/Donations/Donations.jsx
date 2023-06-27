@@ -1,12 +1,12 @@
 import React from "react";
 import "./Donations.css";
-import QR_code from "../../Assets/Images/QR_Code.jpg";
+import QR_code from "../../Assets/Images/Scnr.jpg";
 
 const Donations = () => {
   return (
     <div className="Donations">
       <div className="Donations-img">
-        <img style={{ height: "220px", width: "599px" }} src={QR_code} alt="" />
+        <img style={{ height: "240px", width: "599px" }} src={QR_code} alt="" />
       </div>
       <div className="Donations-text">
         స్కాంద పురాణంలో ఈ క్రింది శ్లోకం ఉంది: "కేవలం ఆలయ నిర్మాణం లేదా

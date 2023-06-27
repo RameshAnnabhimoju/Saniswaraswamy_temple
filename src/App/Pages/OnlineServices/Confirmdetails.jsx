@@ -68,7 +68,11 @@ const Confirmdetails = () => {
         </div>
       </div>
       <div>
-        <button className='btn btn-primary'>Make payment</button>
+        <button
+        onClick={()=>{
+          navigate("/Payment")
+        }}
+        className='btn btn-primary'>Make payment</button>
       </div>
     </div>
   )

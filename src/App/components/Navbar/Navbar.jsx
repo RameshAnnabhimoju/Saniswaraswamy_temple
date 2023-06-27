@@ -22,7 +22,11 @@ const Navbar = () => {
        className="nav-item">
         <h6>About Temple</h6>
       </div>
-      <div className="nav-item">
+      <div
+      onClick={()=>{
+        navigate("/Sevas")
+      }}
+      className="nav-item">
         <h6>Sevas & Darshanam</h6>
       </div>
       <div

@@ -7,7 +7,7 @@
     justify-content: space-between;
     padding: 50px 50px;
     text-align: center;
-    font-family: 'Tiro Telugu', serif;
+    font-family: var(--font-telugu);
     font-size: 18px;
     font-weight: bold;
 }

@@ -13,6 +13,8 @@ import Mahanyasapurvaka from "./App/Pages/OnlineServices/Mahanyasapurvaka";
 import Sanijapam from "./App/Pages/OnlineServices/Sanijapam";
 import SaniSanthi from "./App/Pages/OnlineServices/SaniSanthi";
 import Confirmdetails from "./App/Pages/OnlineServices/Confirmdetails";
+import Sevas from "./App/Pages/Sevas&darshanas/Sevas";
+import Payment from "./App/components/Payment/Payment";
 
 const App = () => {
   return (
@@ -31,6 +33,8 @@ const App = () => {
           <Route path="SaniSanthi" element={<SaniSanthi/>}/>
           <Route path="Confirmdetails" element={<Confirmdetails/>}/>
           <Route path="/News" element={<News/>}/>
+          <Route path="/Sevas" element={<Sevas/>}/> 
+          <Route path="/Payment" element={<Payment/>}/>
         </Routes>
         <Footer/>
         </BrowserRouter>
