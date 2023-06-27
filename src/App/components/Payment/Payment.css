@@ -1,0 +1,24 @@
+.payment-container{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 50px 0;
+}
+.payment-heading{
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 20px 0;
+    font-weight: bold;
+    color: var(--color-red);
+}
+.button-payment{
+width: 100%;
+}
+.input-payment{
+    width: 100%;
+}
+.payment-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
