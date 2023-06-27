@@ -43,3 +43,31 @@
         display: none;
     }
 }
+.login-header{
+ font-weight: bold;
+ color: var(--color-orange);  
+}
+.card-button{
+    width: 30%;
+    margin: 5px 35%;
+}
+.login-feilds{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 80px;
+    
+}
+.login-inputField{
+    height: 40px;
+    margin-bottom: 25px;
+}
+.login-errors{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-red);
+    color: white;
+    margin: 0 80px;
+    padding: 5px 0;
+    border: 0;
+    border-radius: 8px;
+}

@@ -103,7 +103,7 @@ const Navbar = () => {
             {errors !== "" && <div className="login-errors">Error</div>}
             <div className="login-feilds">
               <label htmlFor="login-input">Username</label>
-              {/* <br /> */}
+              <br />
               <input
                 className="login-inputField"
                 id="login-input"
@@ -114,7 +114,7 @@ const Navbar = () => {
               />
               <br />
               <label htmlFor="login-input">Password</label>
-              {/* <br /> */}
+              <br />
               <input
                 className="login-inputField"
                 id="login-password"
