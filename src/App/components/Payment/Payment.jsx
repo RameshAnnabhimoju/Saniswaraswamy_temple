@@ -7,7 +7,10 @@ const Payment = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [transactionId, setTransactionId] = useState();
-  function PaymentHandler() {}
+  function PaymentHandler() {
+    navigate();
+    console.log(transactionId);
+  }
   return (
     <div>
       <div className="payment-heading">Make Payment</div>

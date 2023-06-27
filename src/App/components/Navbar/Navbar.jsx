@@ -16,6 +16,7 @@ const Navbar = () => {
   function loginHandler() {
     setShow(false);
     navigate("/dashboard");
+    setErrors("");
   }
   function changeHandler(e) {
     const { name, value } = e.target;
