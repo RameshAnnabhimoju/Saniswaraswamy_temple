@@ -1,5 +1,5 @@
 import React from 'react'
-import QR from '../../Assets/Images/QR_Img.jpg'
+import QR from '../../Assets/Images/Scanner_img.jpg'
 import './Poster.css'
 
 const Poster = () => {
