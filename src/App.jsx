@@ -13,6 +13,7 @@ import Sevas from "./App/Pages/Sevas&darshanas/Sevas";
 import Payment from "./App/components/Payment/Payment";
 import OnlineServicesDetails from "./App/Pages/OnlineServices/OnlineServicesDetails";
 import Dashboard from "./App/Pages/Dashboard/Dashboard";
+import PaymentSuccess from "./App/components/Payment/PaymentSuccess";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/News" element={<News />} />
           <Route path="/Sevas" element={<Sevas />} />
           <Route path="/Payment" element={<Payment />} />
+          <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
           <Route path="/Dashboard" element={<Dashboard />} />
         </Routes>
         <Footer />

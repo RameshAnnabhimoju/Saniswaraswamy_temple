@@ -1,6 +1,10 @@
 import React from "react";
 import "./Poojas.css";
+import { useNavigate } from "react-router-dom";
+
 function Poojas() {
+  const navigate = useNavigate();
+
   return (
     <div className="pooja-container">
       <div className="pooja-card">
@@ -11,7 +15,15 @@ function Poojas() {
           జపిస్తారు. అన్ని పనులలో శాంతి మరియు విజయాన్ని పొందడానికి ఇది చాలా
           ఉపయోగకరమైన పద్ధతి.
         </div>
-        <button type="button" className="pooja-button">
+        <button
+          type="button"
+          className="pooja-button"
+          onClick={() => {
+            navigate("/OnlineServicesDetails", {
+              state: { type: "YekadasaRudratailabishekam" },
+            });
+          }}
+        >
           Book Now
         </button>
       </div>
@@ -25,7 +37,15 @@ function Poojas() {
           వదిలించుకోవడానికి మరియు బలమైన మనస్సు, మంచి ఆరోగ్యం, సామరస్యం మరియు
           సంపదను కలిగి ఉండటానికి సహాయపడుతుంది.
         </div>
-        <button type="button" className="pooja-button">
+        <button
+          type="button"
+          className="pooja-button"
+          onClick={() => {
+            navigate("/OnlineServicesDetails", {
+              state: { type: "Mahanyasapurvaka" },
+            });
+          }}
+        >
           Book Now
         </button>
       </div>
@@ -37,7 +57,15 @@ function Poojas() {
           కూడా సహాయపడుతుంది. ఇది జ్ఞానం, ఆర్థిక శ్రేయస్సు, మంచి ఆరోగ్యం మరియు
           శత్రువులను మరియు చెడు కళ్ళను వదిలించుకోవడానికి సహాయపడుతుంది.
         </div>
-        <button type="button" className="pooja-button">
+        <button
+          type="button"
+          className="pooja-button"
+          onClick={() => {
+            navigate("/OnlineServicesDetails", {
+              state: { type: "Sanijapam" },
+            });
+          }}
+        >
           Book Now
         </button>
       </div>
@@ -49,7 +77,15 @@ function Poojas() {
           కలిగిస్తుంది. వాటిని నిరోధించాలనుకునే ఎవరైనా ప్రమాదాలను విస్తృతంగా
           తగ్గించడానికి శాంతి గ్రహ శాంతి హోమంపై దృష్టి పెట్టాలి.
         </div>
-        <button type="button" className="pooja-button">
+        <button
+          type="button"
+          className="pooja-button"
+          onClick={() => {
+            navigate("/OnlineServicesDetails", {
+              state: { type: "SaniSanthi" },
+            });
+          }}
+        >
           Book Now
         </button>
       </div>

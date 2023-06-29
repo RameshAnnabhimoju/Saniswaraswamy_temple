@@ -5,7 +5,11 @@ const OnlineServicesDetails = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const initiatePayment = () => {
-    navigate("/Confirmdetails", { state: { values: { ...pooja_values } } });
+    if (Object.values(pooja_values).every((value) => !!value)) {
+      navigate("/Confirmdetails", {
+        state: { values: { ...pooja_values, paymentType: "pooja" } },
+      });
+    }
   };
   const poojaType = location.state.type;
   //   console.log(poojaType);
@@ -140,7 +144,9 @@ const OnlineServicesDetails = () => {
             id=""
           >
             {Object.keys(onlineServices[poojaType].amounts).map((key) => (
-              <option value={key}>{key}</option>
+              <option key={key} value={key}>
+                {key}
+              </option>
             ))}
           </select>
         </div>
@@ -294,7 +300,11 @@ const OnlineServicesDetails = () => {
         </div>
       </form>
       <div>
-        <button className="btn btn-primary" onClick={initiatePayment}>
+        <button
+          className="btn btn-primary"
+          onClick={initiatePayment}
+          disabled={!Object.values(pooja_values).every((value) => !!value)}
+        >
           Continue
         </button>
       </div>
