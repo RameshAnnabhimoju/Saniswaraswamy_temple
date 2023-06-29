@@ -1,13 +1,13 @@
 import React from "react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useState } from "react";
 import edit from "../../Assets/Images/edit.png";
 import { useNavigate, useLocation } from "react-router";
 
 const Confirmdetails = () => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const [poojaDetails, setPoojaDetails] = useState({});
+  // const location = useLocation();
+  // const [poojaDetails, setPoojaDetails] = useState({});
   // useEffect(() => {
   //   setPoojaDetails(location.state.values);
   // }, []);
