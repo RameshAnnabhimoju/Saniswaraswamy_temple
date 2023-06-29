@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import QR from "../../Assets/Images/QR_Img.jpg";
+import QR from "../../Assets/Images/Scanner_img.jpg";
 import { useNavigate, useLocation } from "react-router";
 import "./Payment.css";
 
 const Payment = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [transactionId, setTransactionId] = useState();
+  const [transactionId] = useState();
   function PaymentHandler() {
     navigate();
     console.log(transactionId);

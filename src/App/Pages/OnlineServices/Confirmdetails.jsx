@@ -8,9 +8,9 @@ const Confirmdetails = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [poojaDetails, setPoojaDetails] = useState({});
-  useEffect(() => {
-    setPoojaDetails(location.state.values);
-  }, []);
+  // useEffect(() => {
+  //   setPoojaDetails(location.state.values);
+  // }, []);
   console.log(poojaDetails);
   return (
     <div className="Confirmdetails">
