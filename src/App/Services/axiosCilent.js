@@ -5,9 +5,7 @@ export const api = axios.create({
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
-    "Access-Control-Allow-Origin":
-      process.env.REACT_APP_ORIGIN_PROD_URL ||
-      "https://mandapallisaneswara.com",
+    "Access-Control-Allow-Origin": process.env.REACT_APP_ORIGIN_DEV_URL,
     "Access-Control-Allow-Methods": "GET, POST,PATCH, PUT, DELETE",
     "Access-Control-Allow-Headers": "Content-Type, Authorization",
   },
