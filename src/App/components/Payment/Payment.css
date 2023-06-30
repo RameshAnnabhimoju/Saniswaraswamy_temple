@@ -32,7 +32,11 @@ width: 100%;
 }
 .paymentSucess-container{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 50vh;
+}
+.paymentSuccess-button{
+    margin: 5px;
 }
