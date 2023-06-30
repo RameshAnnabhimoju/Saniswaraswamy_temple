@@ -20,7 +20,7 @@ const Donations = () => {
         <button
           className="donations-button"
           onClick={() => {
-            navigate("/Payment", { state: { values: "", type: "donation" } });
+            navigate("/Donations", { state: { values: "", type: "donation" } });
           }}
         >
           Donate
