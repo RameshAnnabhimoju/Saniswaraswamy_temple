@@ -62,7 +62,7 @@ const OnlineServicesDetails = () => {
     poojaDate: "",
   };
   const [pooja_values, setpooja_values] = useState(initial_pooja_values);
-  console.log(pooja_values);
+  //console.log(pooja_values);
 
   const changeHandler = (e) => {
     const Amounts = onlineServices[poojaType].amounts;
