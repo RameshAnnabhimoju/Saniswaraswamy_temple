@@ -1,22 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import QR1 from "../../Assets/Images/Scanner_img.jpg";
 import QR2 from "../../Assets/Images/Scnr.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Payment.css";
 import { saveTransactionId } from "../../Services/paymentServices/saveTransactionService";
+import Spinner from "react-bootstrap/Spinner";
 
 const Payment = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [transactionId, setTransationId] = useState("");
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    loading
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
+  });
   async function PaymentHandler() {
-    // navigate("/PaymentSuccess", {
-    //   state: {
-    //     referenceId: response?.data?.data,
-    //     amount: location.state.values.amount,
-    //   },
-    //   replace: true,
-    // });
+    setLoading(true);
     await saveTransactionId({
       ...location.state.values,
       transactionId,
@@ -33,11 +34,21 @@ const Payment = () => {
           });
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error))
+      .finally(() => {
+        setLoading(false);
+      });
   }
   return (
     <div>
       <div className="payment-heading">Make Payment</div>
+      <div className="payment-loading-container">
+        <Spinner
+          animation="border"
+          variant="warning"
+          className="payment-loading"
+        />
+      </div>
       <div className="payment-container">
         <img
           style={{ width: "300px", height: "300px", marginRight: "50px" }}
