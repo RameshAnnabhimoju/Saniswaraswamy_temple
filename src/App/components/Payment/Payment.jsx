@@ -17,7 +17,7 @@ const Payment = () => {
       : (document.body.style.overflow = "auto");
   });
   async function PaymentHandler() {
-    if (transactionId.length > 0) {
+    if (transactionId.length > 5) {
       setLoading(true);
       await saveTransactionId({
         ...location.state.values,
@@ -28,8 +28,12 @@ const Payment = () => {
           if (response?.data.status === "success") {
             navigate("/PaymentSuccess", {
               state: {
-                referenceId: response?.data?.data,
-                amount: location.state.values.amount,
+                data: {
+                  ...location.state.values,
+                  transactionId,
+                  referenceId: response?.data?.data,
+                  paymentMode: "QR",
+                },
               },
               replace: true,
             });
@@ -82,11 +86,10 @@ const Payment = () => {
             />
           </div>
           <br />
-          {/* <label htmlFor="">Please enter Debit from Details(Last 4 Digits)</label>
-          <input type="text" /><br /> */}
           <button
             className="btn btn-primary button-payment"
             onClick={PaymentHandler}
+            disabled={transactionId.length !== 6}
           >
             Submit
           </button>
