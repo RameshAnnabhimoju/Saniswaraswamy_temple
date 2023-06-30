@@ -58,7 +58,7 @@ const OnlineServicesDetails = () => {
     pincode: "",
     state: "",
     mobile: "",
-    poojaName: "ఏకాదశ రుద్రతైలాభిషేకం",
+    poojaName: onlineServices[poojaType].name,
     poojaDate: "",
   };
   const [pooja_values, setpooja_values] = useState(initial_pooja_values);
