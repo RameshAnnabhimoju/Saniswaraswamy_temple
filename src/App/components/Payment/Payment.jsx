@@ -1,15 +1,32 @@
 import React, { useState } from "react";
-import QR from "../../Assets/Images/Scanner_img.jpg";
-import { useNavigate, useLocation } from "react-router";
+import QR1 from "../../Assets/Images/Scanner_img.jpg";
+import QR2 from "../../Assets/Images/Scnr.jpg";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Payment.css";
+import { saveTransactionId } from "../../Services/paymentServices/saveTransactionService";
 
 const Payment = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [transactionId] = useState();
-  function PaymentHandler() {
-    navigate();
-    console.log(transactionId);
+  const [transactionId, setTransationId] = useState("");
+  async function PaymentHandler() {
+    await saveTransactionId({
+      ...location.state.values,
+      transactionId,
+      paymentMode: "QR",
+    })
+      .then((response) => {
+        if (response?.data.status === "success") {
+          navigate("/PaymentSuccess", {
+            state: {
+              referenceId: response?.data?.data,
+              amount: location.state.values.amount,
+            },
+            replace: true,
+          });
+        }
+      })
+      .catch((error) => console.log(error));
   }
   return (
     <div>
@@ -17,13 +34,13 @@ const Payment = () => {
       <div className="payment-container">
         <img
           style={{ width: "300px", height: "300px", marginRight: "50px" }}
-          src={QR}
+          src={location.state.values.paymentType === "pooja" ? QR1 : QR2}
           alt=""
         />
         <div className="payment-content">
           <div>Please make your payment using the QR Code</div>
           <div>
-            Make a payment of <b> ₹ {location.state.values}</b>
+            Make a payment of <b> ₹ {location.state.values.amount}</b>
           </div>
           <div>
             <label htmlFor="">
@@ -36,6 +53,10 @@ const Payment = () => {
               type="text"
               className="input-payment"
               placeholder="Enter Last 6 digits"
+              onChange={(event) => {
+                setTransationId(event.target.value);
+              }}
+              value={transactionId}
             />
           </div>
           <br />

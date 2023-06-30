@@ -1,8 +1,10 @@
 import React from "react";
 import "./Donations.css";
 import QR_code from "../../Assets/Images/Scnr.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Donations = () => {
+  const navigate = useNavigate();
   return (
     <div className="Donations">
       <div className="Donations-img">
@@ -15,7 +17,14 @@ const Donations = () => {
         అందజేస్తుంది.
       </div>
       <div className="donations-button-container">
-        <button className="donations-button">Donate</button>
+        <button
+          className="donations-button"
+          onClick={() => {
+            navigate("/Payment", { state: { values: "", type: "donation" } });
+          }}
+        >
+          Donate
+        </button>
       </div>
     </div>
   );
