@@ -28,7 +28,7 @@ const Donations = () => {
   const [donation_values, setdonation_values] = useState(
     initial_donation_values
   );
-  console.log(donation_values);
+ // console.log(donation_values);
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setdonation_values({ ...donation_values, [name]: value });
