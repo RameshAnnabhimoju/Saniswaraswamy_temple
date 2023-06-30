@@ -17,38 +17,42 @@ const Payment = () => {
       : (document.body.style.overflow = "auto");
   });
   async function PaymentHandler() {
-    setLoading(true);
-    await saveTransactionId({
-      ...location.state.values,
-      transactionId,
-      paymentMode: "QR",
-    })
-      .then((response) => {
-        if (response?.data.status === "success") {
-          navigate("/PaymentSuccess", {
-            state: {
-              referenceId: response?.data?.data,
-              amount: location.state.values.amount,
-            },
-            replace: true,
-          });
-        }
+    if (transactionId.length > 0) {
+      setLoading(true);
+      await saveTransactionId({
+        ...location.state.values,
+        transactionId,
+        paymentMode: "QR",
       })
-      .catch((error) => console.log(error))
-      .finally(() => {
-        setLoading(false);
-      });
+        .then((response) => {
+          if (response?.data.status === "success") {
+            navigate("/PaymentSuccess", {
+              state: {
+                referenceId: response?.data?.data,
+                amount: location.state.values.amount,
+              },
+              replace: true,
+            });
+          }
+        })
+        .catch((error) => console.log(error))
+        .finally(() => {
+          setLoading(false);
+        });
+    }
   }
   return (
     <div>
       <div className="payment-heading">Make Payment</div>
-      <div className="payment-loading-container">
-        <Spinner
-          animation="border"
-          variant="warning"
-          className="payment-loading"
-        />
-      </div>
+      {loading && (
+        <div className="payment-loading-container">
+          <Spinner
+            animation="border"
+            variant="warning"
+            className="payment-loading"
+          />
+        </div>
+      )}
       <div className="payment-container">
         <img
           style={{ width: "300px", height: "300px", marginRight: "50px" }}
