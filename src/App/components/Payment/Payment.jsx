@@ -3,30 +3,37 @@ import QR1 from "../../Assets/Images/Scanner_img.jpg";
 import QR2 from "../../Assets/Images/Scnr.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Payment.css";
-import { saveTransactionId } from "../../Services/paymentServices/saveTransactionService";
+// import { saveTransactionId } from "../../Services/paymentServices/saveTransactionService";
 
 const Payment = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [transactionId, setTransationId] = useState("");
   async function PaymentHandler() {
-    await saveTransactionId({
-      ...location.state.values,
-      transactionId,
-      paymentMode: "QR",
-    })
-      .then((response) => {
-        if (response?.data.status === "success") {
-          navigate("/PaymentSuccess", {
-            state: {
-              referenceId: response?.data?.data,
-              amount: location.state.values.amount,
-            },
-            replace: true,
-          });
-        }
-      })
-      .catch((error) => console.log(error));
+    navigate("/PaymentSuccess", {
+      state: {
+        // referenceId: response?.data?.data,
+        amount: location.state.values.amount,
+      },
+      replace: true,
+    });
+    // await saveTransactionId({
+    //   ...location.state.values,
+    //   transactionId,
+    //   paymentMode: "QR",
+    // })
+    //   .then((response) => {
+    //     if (response?.data.status === "success") {
+    //       navigate("/PaymentSuccess", {
+    //         state: {
+    //           referenceId: response?.data?.data,
+    //           amount: location.state.values.amount,
+    //         },
+    //         replace: true,
+    //       });
+    //     }
+    //   })
+    //   .catch((error) => console.log(error));
   }
   return (
     <div>
