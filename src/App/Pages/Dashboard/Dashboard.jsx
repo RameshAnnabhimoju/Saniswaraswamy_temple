@@ -4,9 +4,11 @@ import reload from "../../Assets/Images/reload.png";
 import exportImg from "../../Assets/Images/xls-file2.png";
 import { getPayments } from "../../Services/saveTransactionService";
 import { useNavigate } from "react-router";
+import Spinner from "react-bootstrap/Spinner";
 
 function Dashboard() {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const [payments, setPayments] = useState([]);
   // const [currentPage, setCurrentPage] = useState(1);
   // const [totalPages, setTotalPages] = useState(0);
@@ -16,11 +18,17 @@ function Dashboard() {
   const startDate = new Date("2023-06-30");
   const endDate = new Date().getDate();
   useEffect(() => {
+    loading
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
+  });
+  useEffect(() => {
     fetchPayments(startDate, endDate);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   async function fetchPayments(startDate, endDate) {
     try {
+      setLoading(true);
       await getPayments({ startDate, endDate })
         .then((response) => {
           if (response.data.status === "success") {
@@ -36,8 +44,12 @@ function Dashboard() {
             localStorage.removeItem("madapalli_token");
             navigate("/");
           }
+        })
+        .finally(() => {
+          setLoading(false);
         });
     } catch (error) {
+      setLoading(false);
       console.log(error);
     }
   }
@@ -50,6 +62,15 @@ function Dashboard() {
   // };
   return (
     <div className="dashboard-container">
+      {loading && (
+        <div className="payment-loading-container">
+          <Spinner
+            animation="border"
+            variant="warning"
+            className="payment-loading"
+          />
+        </div>
+      )}
       {/* <div className="dashboard-menu">Payments Received</div> */}
       <div className="dashboard-contents">
         <div className="dashboard-contents-header">
