@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 import { Modal } from "react-bootstrap";
+import { login, logout } from "../../Services/authServices";
 
 const Navbar = () => {
+  const loggedin = !!localStorage?.getItem("mandapalli_token");
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const initialLoginValues = {
@@ -13,10 +15,31 @@ const Navbar = () => {
   const [loginValues, setLoginValues] = useState(initialLoginValues);
   const [errors, setErrors] = useState("");
   const loginModalToggle = () => setShow(!show);
-  function loginHandler() {
-    setShow(false);
-    navigate("/dashboard");
-    setErrors("");
+  async function loginHandler() {
+    if (
+      loginValues.username.length !== 0 &&
+      loginValues.password.length !== 0
+    ) {
+      try {
+        await login({ ...loginValues })
+          .then((response) => {
+            console.log(response);
+            localStorage.setItem("mandapalli_token", response.data.data.token);
+
+            if (response.data.status === "success") {
+              setErrors("");
+              setShow(false);
+              navigate("/Dashboard");
+            }
+          })
+          .catch((error) => {
+            console.log(error.response.data);
+            setErrors(error.response.data.error);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    }
   }
   function changeHandler(e) {
     const { name, value } = e.target;
@@ -83,9 +106,21 @@ const Navbar = () => {
       <div className="nav-item">
         <h6>Support</h6>
       </div>
-      <div className="nav-item nav-signup" onClick={loginModalToggle}>
-        <h6>Signin</h6>
-      </div>
+      {!loggedin ? (
+        <div className="nav-item nav-signup" onClick={loginModalToggle}>
+          <h6>Signin</h6>
+        </div>
+      ) : (
+        <div
+          className="nav-item nav-signup"
+          onClick={() => {
+            navigate("/");
+            logout();
+          }}
+        >
+          <h6>Signout</h6>
+        </div>
+      )}
       <div className="login-modal">
         <Modal
           show={show}
@@ -100,7 +135,7 @@ const Navbar = () => {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {errors !== "" && <div className="login-errors">Error</div>}
+            {errors !== "" && <div className="login-errors">{errors}</div>}
             <div className="login-feilds">
               <label htmlFor="login-input">Username</label>
               <br />
@@ -125,7 +160,14 @@ const Navbar = () => {
                 name="password"
               />
             </div>{" "}
-            <button className="card-button" onClick={loginHandler}>
+            <button
+              className="card-button"
+              onClick={loginHandler}
+              disabled={
+                loginValues.username.length === 0 ||
+                loginValues.password.length === 0
+              }
+            >
               Login
             </button>
           </Modal.Body>

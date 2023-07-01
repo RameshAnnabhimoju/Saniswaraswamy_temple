@@ -3,7 +3,7 @@ import QR1 from "../../Assets/Images/Scanner_img.jpg";
 import QR2 from "../../Assets/Images/Scnr.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Payment.css";
-import { saveTransactionId } from "../../Services/paymentServices/saveTransactionService";
+import { saveTransactionId } from "../../Services/saveTransactionService.js";
 import Spinner from "react-bootstrap/Spinner";
 
 const Payment = () => {

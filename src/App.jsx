@@ -14,6 +14,7 @@ import Payment from "./App/components/Payment/Payment";
 import OnlineServicesDetails from "./App/Pages/OnlineServices/OnlineServicesDetails";
 import Dashboard from "./App/Pages/Dashboard/Dashboard";
 import PaymentSuccess from "./App/components/Payment/PaymentSuccess";
+import Export from "./App/Pages/Export/Export";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/Payment" element={<Payment />} />
           <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
           <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/Export" element={<Export />} />
         </Routes>
         <Footer />
       </BrowserRouter>

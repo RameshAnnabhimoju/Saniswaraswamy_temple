@@ -1,4 +1,4 @@
-import { api } from "../axiosCilent";
+import { api } from "./axiosCilent";
 
 export async function createOrder(body) {
   return await api.post("/payment/createOrder", body);
