@@ -59,15 +59,6 @@ const Navbar = () => {
   }
   return (
     <div className="Navbar prevent-select">
-      {loading && (
-        <div className="payment-loading-container">
-          <Spinner
-            animation="border"
-            variant="warning"
-            className="payment-loading"
-          />
-        </div>
-      )}
       <div
         className="nav-item"
         onClick={() => {
@@ -150,6 +141,15 @@ const Navbar = () => {
           aria-labelledby="contained-modal-title-vcenter"
           centered
         >
+          {loading && (
+            <div className="payment-loading-container">
+              <Spinner
+                animation="border"
+                variant="warning"
+                className="payment-loading"
+              />
+            </div>
+          )}
           <Modal.Header closeButton>
             <Modal.Title>
               <div className="login-header">Administration Login</div>
