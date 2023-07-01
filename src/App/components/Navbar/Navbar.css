@@ -27,7 +27,7 @@
     background-color: var(--color-orange-dark);
 }
 
-.nav-signup {}
+/* .nav-signup {} */
 
 /*small screen laptop*/
 @media screen and (min-width: 768px)and (max-width: 1366px) {

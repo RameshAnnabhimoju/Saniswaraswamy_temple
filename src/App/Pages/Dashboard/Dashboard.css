@@ -58,9 +58,9 @@
     max-height: 70vh;
     overflow-y: scroll;
 }
-.dashboard-contents-body{
+/* .dashboard-contents-body{
     
-}
+} */
 .payment-loading-container{
     position: fixed;
     top:0;
