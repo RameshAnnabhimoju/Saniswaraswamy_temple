@@ -23,12 +23,12 @@ const Donations = () => {
     pincode: "",
     state: "",
     mobile: "",
-    occation: "",
+    occasion: "",
   };
   const [donation_values, setdonation_values] = useState(
     initial_donation_values
   );
- // console.log(donation_values);
+  // console.log(donation_values);
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setdonation_values({ ...donation_values, [name]: value });
@@ -102,12 +102,12 @@ const Donations = () => {
           />
         </div>
         <div>
-          <label htmlFor="">Occation</label>
+          <label htmlFor="">Occasion</label>
           <br />
           <input
             className="input_box"
-            name="occation"
-            value={donation_values.occation}
+            name="occasion"
+            value={donation_values.occasion}
             type="text"
             onChange={changeHandler}
             placeholder="Please enter the occation Ex: Birthday"
