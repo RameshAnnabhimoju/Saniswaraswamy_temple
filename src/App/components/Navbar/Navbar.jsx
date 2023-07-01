@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import { login, logout } from "../../Services/authServices";
+import Spinner from "react-bootstrap/Spinner";
 
 const Navbar = () => {
   const loggedin = !!localStorage?.getItem("mandapalli_token");
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    loading
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
+  });
   const initialLoginValues = {
     username: "",
     password: "",
@@ -21,6 +28,7 @@ const Navbar = () => {
       loginValues.password.length !== 0
     ) {
       try {
+        setLoading(true);
         await login({ ...loginValues })
           .then((response) => {
             console.log(response);
@@ -35,8 +43,12 @@ const Navbar = () => {
           .catch((error) => {
             console.log(error.response.data);
             setErrors(error.response.data.error);
+          })
+          .finally(() => {
+            setLoading(false);
           });
       } catch (error) {
+        setLoading(false);
         console.log(error);
       }
     }
@@ -47,6 +59,15 @@ const Navbar = () => {
   }
   return (
     <div className="Navbar prevent-select">
+      {loading && (
+        <div className="payment-loading-container">
+          <Spinner
+            animation="border"
+            variant="warning"
+            className="payment-loading"
+          />
+        </div>
+      )}
       <div
         className="nav-item"
         onClick={() => {
