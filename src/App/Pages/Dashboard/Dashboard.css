@@ -1,5 +1,5 @@
 .dashboard-container{
-    margin: 0 15%;
+    margin: 1% 15%;
     display: flex;
 }
 .dashboard-menu{
@@ -47,4 +47,17 @@
 }
 .table-details{
     cursor: pointer;
+}
+.dashboard-pagination{
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard-table{
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+.dashboard-contents-body{
+    
 }
