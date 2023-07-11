@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import QR1 from "../../Assets/Images/Scanner_img.jpg";
 import QR2 from "../../Assets/Images/Scnr.jpg";
+import QR3 from "../../Assets/Images/qr3.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Payment.css";
 import { saveTransactionId } from "../../Services/saveTransactionService.js";
@@ -60,7 +61,7 @@ const Payment = () => {
       <div className="payment-container">
         <img
           style={{ width: "300px", height: "300px", marginRight: "50px" }}
-          src={location.state.values.paymentType === "pooja" ? QR1 : QR2}
+          src={location.state.values.paymentType === "pooja" ? QR3 : QR2}
           alt=""
         />
         <div className="payment-content">
