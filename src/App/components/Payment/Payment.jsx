@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import QR1 from "../../Assets/Images/Scanner_img.jpg";
 import QR2 from "../../Assets/Images/Scnr.jpg";
-import QR3 from "../../Assets/Images/qr3.jpg";
+import QR3 from "../../Assets/Images/qr3.jpeg";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Payment.css";
 import { saveTransactionId } from "../../Services/saveTransactionService.js";
