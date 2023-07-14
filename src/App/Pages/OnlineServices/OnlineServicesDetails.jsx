@@ -7,7 +7,19 @@ const OnlineServicesDetails = () => {
   const initiatePayment = () => {
     if (Object.values(pooja_values).every((value) => !!value)) {
       navigate("/Confirmdetails", {
-        state: { values: { ...pooja_values, paymentType: "pooja" } },
+        state: {
+          values: {
+            ...pooja_values,
+            name: pooja_values.name.trim(),
+            gothram: pooja_values.gothram.trim(),
+            city: pooja_values.city.trim(),
+            address: pooja_values.address.trim(),
+            mandal: pooja_values.mandal.trim(),
+            mobile: pooja_values.mobile.trim(),
+            pincode: pooja_values.pincode.trim(),
+            paymentType: "pooja",
+          },
+        },
       });
     }
   };
@@ -48,16 +60,14 @@ const OnlineServicesDetails = () => {
   const initial_pooja_values = {
     name: "",
     gothram: "",
-    nakshtram: "",
     pooja: "1 సారి పూజకు",
     amount: onlineServices[poojaType].amounts["1 సారి పూజకు"],
-    dob: "",
-    gender: "",
     address: "",
     city: "",
     pincode: "",
     state: "",
     mobile: "",
+    mandal: "",
     poojaName: onlineServices[poojaType].name,
     poojaDate: "",
   };
@@ -67,16 +77,11 @@ const OnlineServicesDetails = () => {
   const changeHandler = (e) => {
     const Amounts = onlineServices[poojaType].amounts;
     const { name, value } = e.target;
-    if (name === "pooja") {
-      console.log(e.target);
-      setpooja_values({
-        ...pooja_values,
-        [name]: value,
-        amount: Amounts[value],
-      });
-    } else {
-      setpooja_values({ ...pooja_values, [name]: value.trim() });
-    }
+    setpooja_values({
+      ...pooja_values,
+      [name]: value,
+      amount: Amounts[value],
+    });
   };
 
   return (
@@ -108,31 +113,6 @@ const OnlineServicesDetails = () => {
             onChange={changeHandler}
             type="text"
             placeholder="please enter your gothram"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="">Nakshtram</label>
-          <br />
-          <input
-            className="input_box"
-            name="nakshtram"
-            value={pooja_values.nakshtram}
-            onChange={changeHandler}
-            type="text"
-            placeholder="Please enter your nakshtram"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="">Date of Birth</label> <br />
-          <input
-            className="input_box"
-            name="dob"
-            value={pooja_values.dob}
-            onChange={changeHandler}
-            type="date"
-            id=""
           />
         </div>
 
@@ -177,24 +157,6 @@ const OnlineServicesDetails = () => {
         </div>
 
         <div>
-          <label htmlFor="">Gender</label>
-          <br />
-          <select
-            name="gender"
-            value={pooja_values.gender}
-            onChange={changeHandler}
-            id=""
-          >
-            <option value="" hidden>
-              Select a gender
-            </option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="others">Others</option>
-          </select>
-        </div>
-
-        <div>
           <label htmlFor="">Address</label>
           <br />
           <input
@@ -215,6 +177,18 @@ const OnlineServicesDetails = () => {
             placeholder="Please enter your city"
             name="city"
             value={pooja_values.city}
+            onChange={changeHandler}
+            type="text"
+          />
+        </div>
+        <div>
+          <label htmlFor="">Mandal</label>
+          <br />
+          <input
+            className="input_box"
+            placeholder="Please enter your city"
+            name="mandal"
+            value={pooja_values.mandal}
             onChange={changeHandler}
             type="text"
           />

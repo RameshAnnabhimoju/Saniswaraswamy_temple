@@ -1,6 +1,6 @@
 import React from "react";
-// import QR from '../../Assets/Images/Scanner_img.jpg'
-import QR3 from "../../Assets/Images/qr3.jpeg";
+import QR from "../../Assets/Images/Scanner_img.jpg";
+// import QR3 from "../../Assets/Images/qr3.jpeg";
 import "./Poster.css";
 
 const Poster = () => {
@@ -12,7 +12,7 @@ const Poster = () => {
           స్వయంగ రాలేని భక్తులు QR CODE ద్వారా ఆన్‌లైన్‌లో పూజలను బుక్
           చేసుకోనవచును.
           <br />
-          <img className="QR-img" src={QR3} alt="QR_Code.." />
+          <img className="QR-img" src={QR} alt="QR_Code.." />
           <br />
           చెల్లించిన రసీదు పేరు, గోత్రనామములు, చిరునామ మరియు
           జరిపించవలసిన తేది వివరాలతో +91 9491006567 నకు WhatsApp మెస్సేజ్

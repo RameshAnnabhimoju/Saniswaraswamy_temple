@@ -31,12 +31,16 @@ function Export() {
     await getPayments({ startDate, endDate })
       .then((response) => {
         exportToExcel(
-          response.data.data.payments,
+          response.data.data.payments.map((item) => {
+            return { ...item, createdAt: item.createdAt.split("T")[0] };
+          }),
           `mandapalli payments from ${startDate} to ${endDate}`
         );
       })
       .catch((error) => console.log(error))
       .finally(() => {
+        setStartDate("");
+        setEndDate("");
         setLoading(false);
       });
   };
@@ -51,7 +55,7 @@ function Export() {
           />
         </div>
       )}
-      <div className="export-heading">Export Payments to Xlsx</div>
+      <div className="export-heading">Export Payments to Excel</div>
       <label htmlFor="">Select start date</label>
       <input
         type="date"
@@ -74,7 +78,7 @@ function Export() {
         onClick={handleExport}
         disabled={startDate.length < 1 && endDate < 1}
       >
-        Export to xlsx
+        Export to Excel
       </button>
     </div>
   );

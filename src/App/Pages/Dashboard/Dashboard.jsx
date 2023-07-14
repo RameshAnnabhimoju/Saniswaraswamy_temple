@@ -16,7 +16,7 @@ function Dashboard() {
   // const [endRange, setEndRange] = useState(0);
   // console.log(currentPage, totalPages, startRange, endRange);
   const startDate = new Date("2023-06-30");
-  const endDate = new Date().getDate();
+  const endDate = new Date();
   useEffect(() => {
     loading
       ? (document.body.style.overflow = "hidden")
@@ -108,12 +108,12 @@ function Dashboard() {
                   <th className="dashboard-table-cells dashboard-cells">
                     Pooja Name
                   </th>
-                  <th className="dashboard-table-cells dashboard-cells">
+                  {/* <th className="dashboard-table-cells dashboard-cells">
                     type
                   </th>
                   <th className="dashboard-table-cells dashboard-cells">
                     Mode
-                  </th>
+                  </th> */}
                   <th className="table-amount dashboard-cells">Amount</th>
                   <th className="dashboard-table-cells dashboard-cells">
                     Details
@@ -133,12 +133,12 @@ function Dashboard() {
                       <td className="dashboard-table-cells">
                         {payment.poojaName}
                       </td>
-                      <td className="dashboard-table-cells">
+                      {/* <td className="dashboard-table-cells">
                         {payment.paymentType}
                       </td>
                       <td className="dashboard-table-cells">
                         {payment.paymentMode}
-                      </td>
+                      </td> */}
                       <td className=" table-amount">{payment.amount}</td>
                       <td className="dashboard-table-cells table-details">
                         View
