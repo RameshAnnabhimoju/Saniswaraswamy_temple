@@ -7,22 +7,34 @@ const Donations = () => {
   const initiatePayment = () => {
     if (Object.values(donation_values).every((value) => !!value)) {
       navigate("/Confirmdetails", {
-        state: { values: { ...donation_values, paymentType: "donation" } },
+        state: {
+          values: {
+            ...donation_values,
+            name: donation_values.name.trim(),
+            gothram: donation_values.gothram.trim(),
+            amount: donation_values.amount.trim(),
+            address: donation_values.address.trim(),
+            city: donation_values.city.trim(),
+            pincode: donation_values.pincode.trim(),
+            mobile: donation_values.mobile.trim(),
+            mandal: donation_values.mandal.trim(),
+            occasion: donation_values.occasion.trim(),
+            paymentType: "donation",
+          },
+        },
       });
     }
   };
   const initial_donation_values = {
     name: "",
     gothram: "",
-    nakshtram: "",
     amount: "",
-    dob: "",
-    gender: "",
     address: "",
     city: "",
     pincode: "",
     state: "",
     mobile: "",
+    mandal: "",
     occasion: "",
   };
   const [donation_values, setdonation_values] = useState(
@@ -65,31 +77,6 @@ const Donations = () => {
         </div>
 
         <div>
-          <label htmlFor="">Nakshtram</label>
-          <br />
-          <input
-            className="input_box"
-            name="nakshtram"
-            value={donation_values.nakshtram}
-            onChange={changeHandler}
-            type="text"
-            placeholder="Please enter your nakshtram"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="">Date of Birth</label> <br />
-          <input
-            className="input_box"
-            name="dob"
-            value={donation_values.dob}
-            onChange={changeHandler}
-            type="date"
-            id=""
-          />
-        </div>
-
-        <div>
           <label htmlFor="">Amount</label>
           <br />
           <input
@@ -115,24 +102,6 @@ const Donations = () => {
         </div>
 
         <div>
-          <label htmlFor="">Gender</label>
-          <br />
-          <select
-            name="gender"
-            value={donation_values.gender}
-            onChange={changeHandler}
-            id=""
-          >
-            <option value="" hidden>
-              Select a gender
-            </option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="others">Others</option>
-          </select>
-        </div>
-
-        <div>
           <label htmlFor="">Address</label>
           <br />
           <input
@@ -153,6 +122,19 @@ const Donations = () => {
             placeholder="Please enter your city"
             name="city"
             value={donation_values.city}
+            onChange={changeHandler}
+            type="text"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="">Mandal</label>
+          <br />
+          <input
+            className="input_box"
+            placeholder="Please enter your city"
+            name="mandal"
+            value={donation_values.mandal}
             onChange={changeHandler}
             type="text"
           />

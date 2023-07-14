@@ -7,7 +7,8 @@ export async function saveTransactionId(body) {
   }
 }
 export async function getPayments(params) {
-  return await api.get("/payment/payments", { ...params });
+  // console.log(data);
+  return await api.get("/payment/payments", { params });
   // try {
   // } catch (error) {
   //   console.log(error);
