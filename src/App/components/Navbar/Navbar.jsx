@@ -123,15 +123,25 @@ const Navbar = () => {
           <h6>Signin</h6>
         </div>
       ) : (
-        <div
-          className="nav-item nav-signup"
-          onClick={() => {
-            navigate("/");
-            logout();
-          }}
-        >
-          <h6>Signout</h6>
-        </div>
+        <>
+          <div
+            className="nav-item nav-signup"
+            onClick={() => {
+              navigate("/Dashboard");
+            }}
+          >
+            <h6>Dashboard</h6>
+          </div>
+          <div
+            className="nav-item nav-signup"
+            onClick={() => {
+              navigate("/");
+              logout();
+            }}
+          >
+            <h6>Signout</h6>
+          </div>
+        </>
       )}
       <div className="login-modal">
         <Modal

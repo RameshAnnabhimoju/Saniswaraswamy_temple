@@ -4,8 +4,30 @@ import { saveAs } from "file-saver";
 import { utils, write } from "xlsx";
 import { getPayments } from "../../Services/saveTransactionService";
 import Spinner from "react-bootstrap/Spinner";
+import { MultiSelect } from "../../components/Multiselect/Multiselect";
 function Export() {
+  const items = [
+    { id: "1", value: "_id" },
+    { id: "2", value: "name" },
+    { id: "3", value: "gothram" },
+    { id: "4", value: "poojaName" },
+    { id: "5", value: "pooja" },
+    { id: "6", value: "poojaDate" },
+    { id: "7", value: "amount" },
+    { id: "8", value: "address" },
+    { id: "9", value: "city" },
+    { id: "10", value: "mandal" },
+    { id: "11", value: "state" },
+    { id: "12", value: "pincode" },
+    { id: "13", value: "mobile" },
+    { id: "14", value: "paymentType" },
+    { id: "15", value: "paymentMode" },
+    { id: "16", value: "transactionId" },
+    { id: "17", value: "createdAt" },
+  ];
+  const [selectedItems, setSelectedItems] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [sortBy, setSortBy] = useState("");
   useEffect(() => {
     loading
       ? (document.body.style.overflow = "hidden")
@@ -28,11 +50,31 @@ function Export() {
   }
   const handleExport = async () => {
     setLoading(true);
-    await getPayments({ startDate, endDate })
+    const columns = selectedItems.map((data) => data.value);
+    await getPayments({ startDate, endDate, columns, sortBy })
       .then((response) => {
         exportToExcel(
           response.data.data.payments.map((item) => {
-            return { ...item, createdAt: item.createdAt.split("T")[0] };
+            if (!!item.createdAt && !!item.poojaDate) {
+              return {
+                ...item,
+                createdAt: new Date(item.createdAt).toLocaleDateString(),
+                poojaDtae: new Date(item.poojaDate).toLocaleDateString(),
+              };
+            }
+            if (!!item.createdAt) {
+              return {
+                ...item,
+                createdAt: new Date(item.createdAt).toLocaleDateString(),
+              };
+            }
+            if (!!item.poojaDate) {
+              return {
+                ...item,
+                poojaDtae: new Date(item.poojaDate).toLocaleDateString(),
+              };
+            }
+            return item;
           }),
           `mandapalli payments from ${startDate} to ${endDate}`
         );
@@ -73,10 +115,33 @@ function Export() {
         value={endDate}
       />
       <br />
+      <MultiSelect
+        items={items}
+        state={[selectedItems, setSelectedItems]}
+        placeholder="Select the columns"
+      />
+      <select
+        className="export-inputs"
+        value={sortBy}
+        onChange={(e) => setSortBy(e.target.value)}
+      >
+        <option hidden>Sort By</option>
+        <option value="createdAt" id="createdAt">
+          createdAt
+        </option>
+        <option value="poojaDate" id="poojaDate">
+          poojaDate
+        </option>
+      </select>
       <button
         className="btn btn-primary export-submit"
         onClick={handleExport}
-        disabled={startDate.length < 1 && endDate < 1}
+        disabled={
+          startDate.length < 1 ||
+          endDate < 1 ||
+          selectedItems.length === 0 ||
+          sortBy.length === 0
+        }
       >
         Export to Excel
       </button>

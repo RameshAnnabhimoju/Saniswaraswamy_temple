@@ -128,7 +128,7 @@ function Dashboard() {
                         {payment.transactionId}
                       </td>
                       <td className="dashboard-table-cells">
-                        {payment.createdAt.split("T")[0]}
+                        {new Date(payment.createdAt).toLocaleDateString()}
                       </td>
                       <td className="dashboard-table-cells">
                         {payment.poojaName}
