@@ -27,20 +27,37 @@
     background-color: var(--color-orange-dark);
 }
 
+.mobileMenu{ 
+    width: 50px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: -1000;
+    background-color: white;
+    border-radius: 50%;
+    border:2px solid white;
+    cursor: pointer;
+    opacity: 0;
+}
 /* .nav-signup {} */
-
+/* @media screen and (min-wdth:1020px) {
+    .mobileMenu{ display: none;}
+} */
 /*small screen laptop*/
-@media screen and (min-width: 768px)and (max-width: 1366px) {
+@media screen and  (max-width: 1366px) and (orientation:portrait) {
     .nav-item>h6{
         font-size: 0.87rem;
     }
 }
 
 /* Tablet */
-
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1020px)and (orientation:portrait) {
     .Navbar {
         display: none;
+    }
+    .mobileMenu{
+        z-index: 1000;
+       opacity: 1;
     }
 }
 .login-header{
@@ -84,4 +101,16 @@
     position: fixed;
     right: 50%;
     bottom: 50%;
+}
+.menu-body{
+    color: var(--color-orange);
+}
+.menu-header{
+    color: white;
+    background-color: var(--color-orange);
+}
+.nav-menu-item{
+    margin: 15%;
+    text-align: center;
+    cursor: pointer;
 }

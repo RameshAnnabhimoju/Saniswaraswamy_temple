@@ -28,6 +28,8 @@ function Export() {
   const [selectedItems, setSelectedItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const [sortBy, setSortBy] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
+  console.log(isChecked);
   useEffect(() => {
     loading
       ? (document.body.style.overflow = "hidden")
@@ -36,23 +38,28 @@ function Export() {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   function exportToExcel(data, filename) {
-    const worksheet = utils.json_to_sheet(data);
-    const workbook = utils.book_new();
-    utils.book_append_sheet(workbook, worksheet, "Sheet 1");
-    const excelBuffer = write(workbook, {
-      bookType: "xlsx",
-      type: "array",
-    });
-    const fileData = new Blob([excelBuffer], {
-      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8",
-    });
-    saveAs(fileData, `${filename}.xlsx`);
+    // const worksheet = utils.json_to_sheet(data);
+    // const workbook = utils.book_new();
+    // utils.book_append_sheet(workbook, worksheet, "Sheet 1");
+    // const excelBuffer = write(workbook, {
+    //   bookType: "xlsx",
+    //   type: "array",
+    // });
+    // const fileData = new Blob([excelBuffer], {
+    //   type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8",
+    // });
+    // saveAs(fileData, `${filename}.xlsx`);
   }
   const handleExport = async () => {
     setLoading(true);
     const columns = selectedItems.map((data) => data.value);
     await getPayments({ startDate, endDate, columns, sortBy })
       .then((response) => {
+        // if (isChecked) {
+        //   response.map((data) => {
+        //     data.name = new google.
+        //   });
+        // }
         exportToExcel(
           response.data.data.payments.map((item) => {
             if (!!item.createdAt && !!item.poojaDate) {
@@ -98,53 +105,70 @@ function Export() {
         </div>
       )}
       <div className="export-heading">Export Payments to Excel</div>
-      <label htmlFor="">Select start date</label>
-      <input
-        type="date"
-        name="startDate"
-        className="export-inputs"
-        onChange={(e) => setStartDate(e.target.value)}
-        value={startDate}
-      />
-      <label htmlFor="">Select end date</label>
-      <input
-        type="date"
-        name="endDate"
-        className="export-inputs"
-        onChange={(e) => setEndDate(e.target.value)}
-        value={endDate}
-      />
-      <br />
-      <MultiSelect
-        items={items}
-        state={[selectedItems, setSelectedItems]}
-        placeholder="Select the columns"
-      />
-      <select
-        className="export-inputs"
-        value={sortBy}
-        onChange={(e) => setSortBy(e.target.value)}
-      >
-        <option hidden>Sort By</option>
-        <option value="createdAt" id="createdAt">
-          createdAt
-        </option>
-        <option value="poojaDate" id="poojaDate">
-          poojaDate
-        </option>
-      </select>
-      <button
-        className="btn btn-primary export-submit"
-        onClick={handleExport}
-        disabled={
-          startDate.length < 1 ||
-          endDate < 1 ||
-          selectedItems.length === 0 ||
-          sortBy.length === 0
-        }
-      >
-        Export to Excel
-      </button>
+      <div className="export-layout">
+        <div>
+          <label htmlFor="">Select start date</label>
+          <br />
+          <input
+            type="date"
+            name="startDate"
+            className="export-inputs"
+            onChange={(e) => setStartDate(e.target.value)}
+            value={startDate}
+          />
+        </div>
+        <div>
+          <label htmlFor="">Select end date</label>
+          <br />
+          <input
+            type="date"
+            name="endDate"
+            className="export-inputs"
+            onChange={(e) => setEndDate(e.target.value)}
+            value={endDate}
+          />
+        </div>
+        <MultiSelect
+          items={items}
+          state={[selectedItems, setSelectedItems]}
+          placeholder="Select the columns"
+        />
+        <select
+          className="export-inputs"
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+        >
+          <option hidden>Sort By</option>
+          <option value="createdAt" id="createdAt">
+            createdAt
+          </option>
+          <option value="poojaDate" id="poojaDate">
+            poojaDate
+          </option>
+        </select>
+        <div className="expot-inputs">
+          <input
+            type="checkbox"
+            id="export-inputs-checkbox"
+            value={isChecked}
+            onChange={() => setIsChecked(!isChecked)}
+          />
+          <label htmlFor="export-inputs-checkbox">Translate to Telugu</label>
+        </div>
+        <div></div>
+        <button
+          className="btn btn-primary export-submit"
+          onClick={handleExport}
+          disabled={
+            startDate.length < 1 ||
+            endDate < 1 ||
+            selectedItems.length === 0 ||
+            sortBy.length === 0
+          }
+        >
+          Export to Excel
+        </button>
+      </div>
     </div>
   );
 }
