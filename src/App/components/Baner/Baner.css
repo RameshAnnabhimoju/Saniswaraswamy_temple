@@ -187,10 +187,11 @@
         }
         /* Mobile */
         
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: 500px) {
             .Baner {
                 width: 100%;
-                height: 420px;
+                height: 50vh;
+                overflow: hidden;
             }
             .godimg {
                 width: 180px;
@@ -200,5 +201,16 @@
             .govtlogo {
                 width: 100px;
                 height: 100px;
+            }
+            .title{
+                transform: scale(0.8);
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .godimg,.govt-logo,.title {
+                transform: scale(0.7);
+            }
+            .title{
+                translate: 0 -48px;
             }
         }

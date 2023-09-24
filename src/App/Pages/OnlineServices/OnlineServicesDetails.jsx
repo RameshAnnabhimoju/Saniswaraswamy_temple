@@ -123,6 +123,7 @@ const OnlineServicesDetails = () => {
           <label htmlFor="">Select Pooja</label>
           <br />
           <select
+            className="input_box"
             name="pooja"
             value={pooja_values.pooja}
             onChange={changeHandler}
@@ -152,6 +153,7 @@ const OnlineServicesDetails = () => {
           <label htmlFor="">Pooja Date</label>
           <br />
           <input
+            className="input_box"
             name="poojaDate"
             value={pooja_values.poojaDate}
             onChange={changeHandler}
@@ -214,6 +216,7 @@ const OnlineServicesDetails = () => {
           <label htmlFor="">State</label>
           <br />
           <select
+            className="input_box"
             name="state"
             value={pooja_values.state}
             onChange={changeHandler}

@@ -60,6 +60,7 @@ const Payment = () => {
       )}
       <div className="payment-container">
         <img
+          className="paymentQR"
           style={{ width: "300px", height: "300px", marginRight: "50px" }}
           src={location.state.values.paymentType === "pooja" ? QR3 : QR2}
           alt=""

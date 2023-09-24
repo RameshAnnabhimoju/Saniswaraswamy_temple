@@ -51,11 +51,16 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
+@media screen and (max-width: 500px) {
     .Donations {
         height: 470px;
     }
     .Donations-text {
         width: 350px;
+        max-width: 99vw;
+    }
+    .Donations-img img{
+        max-width: 99vw;
+        
     }
 }

@@ -6,7 +6,7 @@ function YoutubeSection() {
       <div className="youtube-embedded">
         <iframe
           title="youtube-video"
-          width="500"
+          width="500px"
           height="100%"
           src="https://www.youtube.com/embed/DtBxckJ4Wd4?autoplay=1&mute=1"
         ></iframe>
