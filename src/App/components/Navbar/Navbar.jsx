@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { Modal, Offcanvas } from "react-bootstrap";
 import { login, logout } from "../../Services/authServices";
 import Spinner from "react-bootstrap/Spinner";
