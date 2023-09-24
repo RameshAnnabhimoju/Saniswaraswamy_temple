@@ -38,17 +38,17 @@ function Export() {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   function exportToExcel(data, filename) {
-    // const worksheet = utils.json_to_sheet(data);
-    // const workbook = utils.book_new();
-    // utils.book_append_sheet(workbook, worksheet, "Sheet 1");
-    // const excelBuffer = write(workbook, {
-    //   bookType: "xlsx",
-    //   type: "array",
-    // });
-    // const fileData = new Blob([excelBuffer], {
-    //   type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8",
-    // });
-    // saveAs(fileData, `${filename}.xlsx`);
+    const worksheet = utils.json_to_sheet(data);
+    const workbook = utils.book_new();
+    utils.book_append_sheet(workbook, worksheet, "Sheet 1");
+    const excelBuffer = write(workbook, {
+      bookType: "xlsx",
+      type: "array",
+    });
+    const fileData = new Blob([excelBuffer], {
+      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8",
+    });
+    saveAs(fileData, `${filename}.xlsx`);
   }
   const handleExport = async () => {
     setLoading(true);
