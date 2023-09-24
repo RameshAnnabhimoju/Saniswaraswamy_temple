@@ -7,7 +7,7 @@ function CarouselComponent() {
     <Carousel className="carousel">
       <Carousel.Item className="item" interval={5000}>
         <img
-          className="d-block w-100 select-disable"
+          className="select-disable item-img"
           src={godimg}
           style={{ height: "500px" }}
           alt="First slide"
@@ -16,7 +16,7 @@ function CarouselComponent() {
 
       <Carousel.Item className="item" interval={5000}>
         <img
-          className="d-block w-100 select-disable"
+          className=" select-disable item-img"
           src={godimg}
           style={{ height: "500px" }}
           alt="Second slide"
@@ -25,7 +25,7 @@ function CarouselComponent() {
 
       <Carousel.Item className="item" interval={5000}>
         <img
-          className="d-block w-100 select-disable"
+          className=" select-disable item-img"
           src={godimg}
           style={{ height: "500px" }}
           alt="Third slide"

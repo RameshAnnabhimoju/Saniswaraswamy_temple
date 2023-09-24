@@ -2,14 +2,6 @@
     pointer-events: none
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
-    /* img {
-        height: 100px;
-    } */
-    /* .item {
-        height: 50px;
-    }
-    .carousel {
-        height: 100px;
-    } */
+.item-img{
+    width: 100vw;
 }

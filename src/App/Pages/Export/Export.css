@@ -1,12 +1,13 @@
 .export-container{
     min-height: 60vh;
     width: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
 }
 .export-heading{
+    text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-red);
@@ -18,6 +19,8 @@
 }
 .export-submit{
     width: 200px;
+    position: relative;
+    right: -120px;
 }
 .payment-loading-container{
     position: fixed;
@@ -32,4 +35,14 @@
     position: fixed;
     right: 50%;
     bottom: 50%;
+}
+#export-inputs-checkbox{
+    margin: 10px 5px;
+    cursor: pointer;
+}
+.export-layout{
+    display: grid;
+    grid-template-columns: 210px 210px;
+    gap: 30px;
+    margin: 2% 38%;
 }
