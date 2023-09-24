@@ -80,7 +80,7 @@
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
     .youtube-container {
         height: 780px;
     }
@@ -98,5 +98,8 @@
     .youtube-button {
         width: 120px;
         padding: 13px 5px;
+    }
+    iframe{
+        max-width: 99vw;
     }
 }

@@ -157,6 +157,7 @@ const Donations = () => {
           <label htmlFor="">State</label>
           <br />
           <select
+            className="input_box"
             name="state"
             value={donation_values.state}
             onChange={changeHandler}

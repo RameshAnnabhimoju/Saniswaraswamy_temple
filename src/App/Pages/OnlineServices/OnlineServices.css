@@ -82,6 +82,7 @@
     font-size: 28px;
     font-weight: bold;
     color: red;
+    text-align: center;
 }
 
 .ConfirmDetails_Card {
@@ -95,6 +96,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .edit_icon {
@@ -103,4 +105,35 @@
     right: -220px;
     height: 30px;
     width: 30px;
+    cursor: pointer;
+}
+@media screen and (max-width:960px) {
+    .ConfirmDetails_Card {
+        /* display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 25px; */
+        max-width: 80vw;
+        margin: 0;
+    }
+    
+}
+@media screen and (max-width:676px) {
+    .card-grid {
+        padding: 5% 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    .card-button{
+        transform: scale(0.8);
+        width: 130px;
+        margin: 0 25%;
+    }
+    .input_box {
+        max-width: 95vw;
+    }
+    .edit_icon{
+        position: relative;
+        top: -300px;
+    }
 }

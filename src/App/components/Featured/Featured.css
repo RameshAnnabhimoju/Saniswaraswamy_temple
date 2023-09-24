@@ -79,7 +79,7 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
+@media screen  and (max-width: 500px) {
     .featured-container {
         background-size: 200%;
         height: 900;
@@ -87,5 +87,9 @@
         flex-direction: column;
         background-position: -180px 400px;
         margin: 20px 0px;
+        overflow: hidden;
+    }
+    .featured-right ul {
+       font-size: medium;
     }
 }
