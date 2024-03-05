@@ -8,23 +8,25 @@ import Donations from "../../components/Donations/Donations";
 import "./Home.css";
 import Newsupdates from "../../components/News&updates/Newsupdates";
 import Events from "../../components/Events/Events";
-import Teluguscrollingtxt from "../../components/Scrolling_text/Tel_scroll_txt"
+import Teluguscrollingtxt from "../../components/Scrolling_text/Tel_scroll_txt";
 import Featured from "../../components/Featured/Featured";
 import Poster from "../../components/Poojas_poster/Poster";
+import VideoSection from "../../components/Video/VideoSection";
 
 const Home = () => {
   return (
     <div>
       <CarouselComponent />
       <Scrollingtxt />
-      <Teluguscrollingtxt/>
+      <Teluguscrollingtxt />
 
+      <VideoSection />
       <div className="updates-section">
         <Newsupdates />
         <Events />
       </div>
 
-      <Poster/>
+      <Poster />
 
       <Featured />
       <Poojas />

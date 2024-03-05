@@ -1,0 +1,14 @@
+.videoSection_Contaier {
+  margin-top: 15px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.videoSection_title {
+  font-family: var(--font-telugu);
+  /* margin-bottom: 20px; */
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--color-red-youtube-dark);
+}
