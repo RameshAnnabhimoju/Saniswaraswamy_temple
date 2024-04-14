@@ -8,7 +8,7 @@ function Poojas() {
   return (
     <div className="pooja-container">
       <div className="pooja-card">
-        <div className="pooja-heading">ఏకాదశి రుద్రాభిషేకం</div>
+        <div className="pooja-heading">ఏకాదశి రుద్రాభిషేకం (పరోక్ష)</div>
         <div className="pooja-data">
           హోమం అనేది శివుడు తన పదకొండు రూపాలకు రుద్రుడిగా చేసిన చాలా శక్తివంతమైన
           ఆచారం. రుద్ర రూపాలను ఆవాహన చేసేందుకు రుద్ర మంత్రాలను పదకొండు సార్లు
@@ -29,7 +29,7 @@ function Poojas() {
       </div>
       <div className="pooja-card">
         <div className="pooja-heading">
-          మహాన్యాసపూర్వక ఏకవార రుద్రతైలాభిషేకం
+          మహాన్యాసపూర్వక ఏకవార రుద్రతైలాభిషేకం (పరోక్ష)
         </div>
         <div className="pooja-data">
           రుద్రాభిషేకం పూజ ప్రతికూలత, చెడు కర్మలను తొలగించడంలో సహాయపడుతుంది
@@ -50,7 +50,7 @@ function Poojas() {
         </button>
       </div>
       <div className="pooja-card">
-        <div className="pooja-heading">శని జపం</div>
+        <div className="pooja-heading">శని జపం (పరోక్ష)</div>
         <div className="pooja-data">
           శని జపం ఒక వ్యక్తి కెరీర్ లేదా వ్యాపార జీవితంలో గొప్ప ఎత్తులకు
           చేరుకోవడానికి సహాయపడుతుంది. ఇది ఒక వ్యక్తి జీవితంలో విజయం సాధించడానికి
@@ -70,7 +70,7 @@ function Poojas() {
         </button>
       </div>
       <div className="pooja-card">
-        <div className="pooja-heading">శని శాంతి హోమం</div>
+        <div className="pooja-heading">శని శాంతి హోమం (పరోక్ష)</div>
         <div className="pooja-data">
           వేద గ్రంధాల ప్రకారం, జన్మ చార్ట్‌లో శని గ్రహం యొక్క బలహీన స్థానం లేదా
           పరివర్తన ఆర్థిక, డబ్బు నష్టం, ఆరోగ్య సమస్యలు మరియు ఇతర సమస్యలను

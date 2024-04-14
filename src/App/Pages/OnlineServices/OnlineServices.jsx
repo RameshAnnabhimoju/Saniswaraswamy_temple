@@ -11,7 +11,7 @@ const OnlineServices = () => {
       <div className="card-grid">
         <div className="card">
           <div className="card-content">
-            <h2 className="card-title">ఏకాదశ రుద్రతైలాభిషేకం</h2>
+            <h2 className="card-title">ఏకాదశ రుద్రతైలాభిషేకం (పరోక్ష)</h2>
             <div className="card-description">
               <p>1 సారి పూజకు ₹ 400/-</p>
               <p>1సం.లో వచ్చే 52 శనివారములకు ₹ 20,800/-</p>
@@ -37,7 +37,9 @@ const OnlineServices = () => {
         </div>
         <div className="card">
           <div className="card-content">
-            <h2 className="card-title">మహాన్యాసపూర్వక ఏకవార రుద్రతైలాభిషేకం</h2>
+            <h2 className="card-title">
+              మహాన్యాసపూర్వక ఏకవార రుద్రతైలాభిషేకం (పరోక్ష)
+            </h2>
             <div className="card-description">
               <p>1 సారి పూజకు ₹ 250/-</p>
               <p>1సం.లో వచ్చే 52 శనివారములకు ₹ |13,000/-</p>
@@ -63,7 +65,7 @@ const OnlineServices = () => {
         </div>
         <div className="card">
           <div className="card-content">
-            <h2 className="card-title">శని జపం</h2>
+            <h2 className="card-title">శని జపం (పరోక్ష)</h2>
             <div className="card-description">
               <p>1 సారి పూజకు ₹ 6,000/-</p>
             </div>
@@ -81,7 +83,7 @@ const OnlineServices = () => {
         </div>
         <div className="card">
           <div className="card-content">
-            <h2 className="card-title">శని శాంతి హోమం</h2>
+            <h2 className="card-title">శని శాంతి హోమం (పరోక్ష)</h2>
             <div className="card-description">
               <p>1 సారి పూజకు ₹ 1,000/-</p>
             </div>

@@ -77,8 +77,13 @@ const OnlineServicesDetails = () => {
   const changeHandler = (e) => {
     const Amounts = onlineServices[poojaType].amounts;
     const { name, value } = e.target;
-    if (name === "amount") {
-      setpooja_values({ ...pooja_values, [name]: Amounts[value] });
+    console.log(name, value, Amounts[value]);
+    if (name === "pooja") {
+      setpooja_values({
+        ...pooja_values,
+        amount: Amounts[value],
+        [name]: value,
+      });
     } else {
       setpooja_values({
         ...pooja_values,
@@ -148,7 +153,17 @@ const OnlineServicesDetails = () => {
             disabled
           />
         </div>
-
+        <div>
+          <label htmlFor="">Pooja Mode</label>
+          <br />
+          <input
+            className="input_box"
+            name="poojaMode"
+            value={"Paroksha"}
+            type="text"
+            disabled
+          />
+        </div>
         <div>
           <label htmlFor="">Pooja Date</label>
           <br />
