@@ -1,0 +1,8 @@
+#PageNotFound_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: darkgray;
+  margin: 10% 0;
+}

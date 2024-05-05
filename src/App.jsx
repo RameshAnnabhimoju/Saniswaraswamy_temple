@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./App/Pages/HomePage/Home";
 import About from "./App/Pages/About/About";
 import Baner from "./App/components/Baner/Baner";
@@ -15,6 +15,10 @@ import OnlineServicesDetails from "./App/Pages/OnlineServices/OnlineServicesDeta
 import Dashboard from "./App/Pages/Dashboard/Dashboard";
 import PaymentSuccess from "./App/components/Payment/PaymentSuccess";
 import Export from "./App/Pages/Export/Export";
+import PrivacyPolicy from "./App/Pages/PrivacyPolicy/PrivacyPolicy";
+import TermsAndConditions from "./App/Pages/TermsAndConditions/TermsAndConditions";
+import CancellationAndRefund from "./App/Pages/Cancellation&Refund/CancellationsAndRefund";
+import PageNotFound from "./App/Pages/pageNotFound/PageNotFound";
 
 const App = () => {
   return (
@@ -38,6 +42,14 @@ const App = () => {
           <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/Export" element={<Export />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
+          <Route
+            path="/CancellationAndRefund"
+            element={<CancellationAndRefund />}
+          />
+          <Route path="/PageNotFound" element={<PageNotFound />} />
+          <Route path="*" element={<Navigate replace to="/PageNotFound" />} />
         </Routes>
         <Footer />
       </BrowserRouter>
