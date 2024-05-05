@@ -11,7 +11,7 @@ import Events from "../../components/Events/Events";
 import Teluguscrollingtxt from "../../components/Scrolling_text/Tel_scroll_txt";
 import Featured from "../../components/Featured/Featured";
 import Poster from "../../components/Poojas_poster/Poster";
-import VideoSection from "../../components/Video/VideoSection";
+// import VideoSection from "../../components/Video/VideoSection";
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
       <Scrollingtxt />
       <Teluguscrollingtxt />
 
-      <VideoSection />
+      {/* <VideoSection /> */}
       <div className="updates-section">
         <Newsupdates />
         <Events />
