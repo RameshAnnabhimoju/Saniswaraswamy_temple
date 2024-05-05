@@ -29,31 +29,31 @@ const OnlineServicesDetails = () => {
     YekadasaRudratailabishekam: {
       name: "ఏకాదశ రుద్రతైలాభిషేకం",
       amounts: {
-        "1 సారి పూజకు": 400,
-        "1సం.లో వచ్చే 52 శనివారములకు": 20800,
-        "శాశ్వత అభిషేకము": 4000,
-        "శాశ్వత శనిత్రయోదశులు": 24000,
+        "1 సారి పూజకు": 600,
+        "శాశ్వత అభిషేకము": 6000,
+        "1సం.లో వచ్చే 52 శనివారములకు": 32200,
+        "శాశ్వత శనిత్రయోదశులు": 36000,
       },
     },
     Mahanyasapurvaka: {
       name: "మహాన్యాసపూర్వక ఏకవార రుద్రతైలాభిషేకం",
       amounts: {
-        "1 సారి పూజకు": 250,
-        "1సం.లో వచ్చే 52 శనివారములకు": 13000,
-        "శాశ్వత అభిషేకము": 3000,
-        "శాశ్వత శనిత్రయోదశులు": 18000,
+        "1 సారి పూజకు": 400,
+        "శాశ్వత అభిషేకము": 5000,
+        "1సం.లో వచ్చే 52 శనివారములకు": 20800,
+        "శాశ్వత శనిత్రయోదశులు": 30000,
       },
     },
     Sanijapam: {
       name: "శని జపం",
       amounts: {
-        "1 సారి పూజకు": 6000,
+        "1 సారి పూజకు": 8000,
       },
     },
     SaniSanthi: {
       name: "శని శాంతి హోమం",
       amounts: {
-        "1 సారి పూజకు": 1000,
+        "1 సారి పూజకు": 1500,
       },
     },
   };
@@ -95,7 +95,7 @@ const OnlineServicesDetails = () => {
   return (
     <div className="Yekadasa_rudratailabishekam">
       <div className="Yekadasa_rudratailabishekam_title">
-        {onlineServices[poojaType].name}
+        {onlineServices[poojaType].name + " (పరోక్ష)"}
       </div>
       <form className="donations_form" action="">
         <div>
